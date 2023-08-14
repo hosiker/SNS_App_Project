@@ -49,7 +49,7 @@ class SiginUpActivity : AppCompatActivity() {
         val inputstateM = stateM.text.toString()
 
         when {
-            nameCheck == true ->
+            nameCheck == false ->
                 Toast.makeText(getApplicationContext(), "아이디 중복 체크를 해주세요!!", Toast.LENGTH_SHORT)
                     .show()
 
