@@ -17,6 +17,8 @@ class SiginUpActivity : AppCompatActivity() {
     private val mbti: EditText by lazy { findViewById(R.id.mbti_ed) }
     private val stateM: EditText by lazy { findViewById(R.id.profile_ed) }
 
+    private var nameCheck : Boolean =false
+
     //지연초기화
     // 이 변수가 사용되는 시점에서 초기화가 된다.
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,14 +28,19 @@ class SiginUpActivity : AppCompatActivity() {
 
     }
 
-    fun doubleCheck(view:View) {
+    fun doubleCheck(view: View) {
         if (userManager.userList.find { it.id == id.text.toString() } != null) {
-            Toast.makeText(getApplicationContext(), "중복된 아이디 입니다!!", Toast.LENGTH_SHORT).show()
 
-        } else Toast.makeText(getApplicationContext(), "사용가능한 아이디 입니다!!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(getApplicationContext(), "중복된 아이디 입니다!!", Toast.LENGTH_SHORT).show()
+            nameCheck = false
+
+        } else {
+            Toast.makeText(getApplicationContext(), "사용가능한 아이디 입니다!!", Toast.LENGTH_SHORT).show()
+            nameCheck = true
+        }
     }
 
-    fun signupButton(view:View) {
+    fun signupButton(view: View) {
 
         val inputId = id.text.toString()
         val inputpsw = psw.text.toString()
@@ -42,14 +49,14 @@ class SiginUpActivity : AppCompatActivity() {
         val inputstateM = stateM.text.toString()
 
         when {
-            userManager.userList.find { it.id == inputId } != null ->
+            nameCheck == true ->
                 Toast.makeText(getApplicationContext(), "아이디 중복 체크를 해주세요!!", Toast.LENGTH_SHORT)
                     .show()
 
             inputpsw.trim().isEmpty() ->
                 Toast.makeText(getApplicationContext(), "비밀번호를 입력해주세요!!", Toast.LENGTH_SHORT).show()
 
-           inputname.trim().isEmpty() ->
+            inputname.trim().isEmpty() ->
                 Toast.makeText(getApplicationContext(), "이름을 입력해주세요!!", Toast.LENGTH_SHORT).show()
 
             inputmbti.trim().isEmpty() ->
@@ -59,18 +66,24 @@ class SiginUpActivity : AppCompatActivity() {
                 Toast.makeText(getApplicationContext(), "소개글을 입력해주세요!!", Toast.LENGTH_SHORT).show()
 
             else -> {
-                userManager.userList.add(User(
-                    id = inputId,
-                    password =  inputpsw,
-                    name = inputname,
-                    mbti = inputmbti,
-                    stateM = inputstateM
-                ))
+                userManager.userList.add(
+                    User(
+                        id = inputId,
+                        password = inputpsw,
+                        name = inputname,
+                        mbti = inputmbti,
+                        stateM = inputstateM
+                    )
+                )
                 val intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
             }
         }
 
+    }
+
+    fun finish(view:View){
+        finish()
     }
 
 
