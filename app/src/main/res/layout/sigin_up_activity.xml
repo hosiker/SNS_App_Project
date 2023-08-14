@@ -69,7 +69,6 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="18dp"
-            android:onClick="doubleCheck"
             android:text="중복체크" />
 
 
@@ -203,10 +202,12 @@
         android:id="@+id/signup_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="44dp"
+        android:onClick="signupButton"
         android:text="회원가입"
         app:constraintTop_toBottomOf="@+id/signupl"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signuplinearlayout5" />
 

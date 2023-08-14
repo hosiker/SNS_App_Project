@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.UserManager
+import android.view.View
 import android.widget.EditText
 import android.widget.Toast
 
@@ -25,35 +26,51 @@ class SiginUpActivity : AppCompatActivity() {
 
     }
 
-    fun doubleCheck() {
+    fun doubleCheck(view:View) {
         if (userManager.userList.find { it.id == id.text.toString() } != null) {
             Toast.makeText(getApplicationContext(), "중복된 아이디 입니다!!", Toast.LENGTH_SHORT).show()
 
         } else Toast.makeText(getApplicationContext(), "사용가능한 아이디 입니다!!", Toast.LENGTH_SHORT).show()
     }
 
-    fun signupButton() {
+    fun signupButton(view:View) {
+
+        val inputId = id.text.toString()
+        val inputpsw = psw.text.toString()
+        val inputname = name.text.toString()
+        val inputmbti = mbti.text.toString()
+        val inputstateM = stateM.text.toString()
+
         when {
-            userManager.userList.find { it.id == id.text.toString() } != null ->
+            userManager.userList.find { it.id == inputId } != null ->
                 Toast.makeText(getApplicationContext(), "아이디 중복 체크를 해주세요!!", Toast.LENGTH_SHORT)
                     .show()
 
-            psw.text.toString().trim().isEmpty() ->
+            inputpsw.trim().isEmpty() ->
                 Toast.makeText(getApplicationContext(), "비밀번호를 입력해주세요!!", Toast.LENGTH_SHORT).show()
 
-            name.text.toString().trim().isEmpty() ->
+           inputname.trim().isEmpty() ->
                 Toast.makeText(getApplicationContext(), "이름을 입력해주세요!!", Toast.LENGTH_SHORT).show()
 
-            mbti.text.toString().trim().isEmpty() ->
+            inputmbti.trim().isEmpty() ->
                 Toast.makeText(getApplicationContext(), "MBTI를 입력해주세요!!", Toast.LENGTH_SHORT).show()
 
-            stateM.text.toString().trim().isEmpty() ->
+            inputstateM.trim().isEmpty() ->
                 Toast.makeText(getApplicationContext(), "소개글을 입력해주세요!!", Toast.LENGTH_SHORT).show()
 
-
+            else -> {
+                userManager.userList.add(User(
+                    id = inputId,
+                    password =  inputpsw,
+                    name = inputname,
+                    mbti = inputmbti,
+                    stateM = inputstateM
+                ))
+                val intent = Intent(this, LoginActivity::class.java)
+                startActivity(intent)
+            }
         }
-        val intent = Intent(this, LoginActivity::class.java)
-        startActivity(intent)
+
     }
 
 
