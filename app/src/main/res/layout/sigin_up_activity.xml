@@ -7,38 +7,31 @@
     android:background="#51FFEB3B"
     tools:context=".SiginUpActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/signuptoolbar"
-        android:layout_width="0dp"
+
+    <Button
+        android:id="@+id/cancel_btn"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="finishOnClick"
+        android:text="뒤로가기"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.051"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="0dp">
-
-        <Button
-            android:id="@+id/cancel_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="finish"
-            android:text="뒤로가기"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="8dp" />
-
-
-    </androidx.appcompat.widget.Toolbar>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
 
     <ImageView
         android:id="@+id/signuptoolbarimg"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_gravity="center"
+        android:layout_marginTop="44dp"
         android:src="@drawable/ic_launcher_foreground"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.522"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signuptoolbar" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/signuplinearlayout"
@@ -64,8 +57,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:layout_marginTop="20dp"
+            android:hint="아이디를 입력해주세요."
             android:maxLines="1"
-            android:text="아이디를 입력해주세요."
             android:textSize="18dp"
             android:textStyle="normal" />
 
@@ -75,7 +68,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="18dp"
-            android:text="중복체크" />
+            android:onClick="doubleCheckOnClick"
+            android:text="확인" />
 
 
     </LinearLayout>
@@ -103,8 +97,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
+            android:hint="비밀번호를 입력해주세요."
+            android:inputType="textPassword"
             android:maxLines="1"
-            android:text="비밀번호를 입력해주세요."
             android:textSize="18dp"
             android:textStyle="normal" />
 
@@ -135,7 +130,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
-            android:text="이름을 입력해주세요."
+            android:hint="이름을 입력해주세요."
             android:textSize="18dp"
             android:textStyle="normal" />
 
@@ -166,15 +161,25 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
             android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:hint="MBTI를 입력해주세요."
             android:inputType="textCapCharacters"
             android:maxLength="4"
             android:maxLines="1"
-            android:text="MBTI를 입력해주세요."
             android:textSize="18dp"
             android:textStyle="normal" />
-
-
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/mbti_check_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:text=""
+        android:textSize="16dp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/signuplinearlayout5"
+        app:layout_constraintStart_toStartOf="@+id/signuplinearlayout4"
+        app:layout_constraintTop_toBottomOf="@+id/signuplinearlayout4" />
 
     <LinearLayout
         android:id="@+id/signuplinearlayout5"
@@ -199,7 +204,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
-            android:text="소개글을 입력해주세요."
+            android:hint="소개글을 입력해주세요."
             android:textSize="18dp"
             android:textStyle="normal" />
 
@@ -207,25 +212,16 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/signup_btn"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:onClick="signupButton"
+        android:onClick="signupOnClick"
         android:text="회원가입"
-        app:constraintTop_toBottomOf="@+id/signupl"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signuplinearlayout5" />
+        app:layout_constraintTop_toBottomOf="@id/signuplinearlayout5"
+        app:layout_constraintVertical_bias="0.259" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="회원가입화면 예시"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
