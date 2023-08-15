@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.UserManager
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
@@ -17,7 +19,7 @@ class SiginUpActivity : AppCompatActivity() {
     private val mbti: EditText by lazy { findViewById(R.id.mbti_ed) }
     private val stateM: EditText by lazy { findViewById(R.id.profile_ed) }
 
-    private var nameCheck : Boolean =false
+    private var nameCheck: Boolean = false
 
     //지연초기화
     // 이 변수가 사용되는 시점에서 초기화가 된다.
@@ -53,17 +55,8 @@ class SiginUpActivity : AppCompatActivity() {
                 Toast.makeText(getApplicationContext(), "아이디 중복 체크를 해주세요!!", Toast.LENGTH_SHORT)
                     .show()
 
-            inputpsw.trim().isEmpty() ->
-                Toast.makeText(getApplicationContext(), "비밀번호를 입력해주세요!!", Toast.LENGTH_SHORT).show()
-
-            inputname.trim().isEmpty() ->
-                Toast.makeText(getApplicationContext(), "이름을 입력해주세요!!", Toast.LENGTH_SHORT).show()
-
-            inputmbti.trim().isEmpty() ->
-                Toast.makeText(getApplicationContext(), "MBTI를 입력해주세요!!", Toast.LENGTH_SHORT).show()
-
-            inputstateM.trim().isEmpty() ->
-                Toast.makeText(getApplicationContext(), "소개글을 입력해주세요!!", Toast.LENGTH_SHORT).show()
+            checkEmpty(inputpsw) || checkEmpty(inputname) || checkEmpty(inputmbti)
+            -> checkMessage(psw = inputpsw, name = inputname, mbti = inputmbti)
 
             else -> {
                 userManager.userList.add(
@@ -82,9 +75,56 @@ class SiginUpActivity : AppCompatActivity() {
 
     }
 
-    fun finish(view:View){
+    fun finish(view: View) {
         finish()
     }
 
+    fun checkMessage(psw: String, name: String, mbti: String) {
 
+        when {
+            checkEmpty(psw) -> toast("비밀번호를 확인해주세요")
+
+            checkEmpty(name) -> toast("이름을 입력해주세요")
+
+            checkEmpty(mbti) -> toast("mbti를 입력해주세요")
+
+            checkEmpty(psw) && checkEmpty(name) -> toast("비밉번호와 이름을 입력해주세요")
+
+            checkEmpty(psw) && checkEmpty(mbti) -> toast("비밉번호와 mbti를 입력해주세요")
+
+            checkEmpty(mbti) && checkEmpty(name) -> toast("mbti와 이름을 입력해주세요")
+
+            checkEmpty(psw) && checkEmpty(name) && checkEmpty(mbti) -> toast("공백을 확인해주세요 입력해주세요")
+
+        }
+
+    }
+
+    fun toast(message: String) {
+        Toast.makeText(applicationContext, message, Toast.LENGTH_SHORT).show()
+    }
+
+    fun checkEmpty(id: String): Boolean {
+        return id.trim().isEmpty()
+    }
+
+    fun isMBTI(mbti: String): Boolean {
+        return mbti.matches(Regex("[EI][FT][JP]]"))
+    }
+
+    fun mbtiWatcher(view: View) {
+        mbti.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+
+            }
+        })
+    }
 }

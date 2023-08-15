@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SiginUpActivity"
-    android:background="#51FFEB3B">
+    android:background="#51FFEB3B"
+    tools:context=".SiginUpActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/signuptoolbar"
@@ -32,41 +32,42 @@
 
     <ImageView
         android:id="@+id/signuptoolbarimg"
-        android:src="@drawable/ic_launcher_foreground"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_gravity="center"
-        app:layout_constraintTop_toBottomOf="@+id/signuptoolbar"
+        android:src="@drawable/ic_launcher_foreground"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signuptoolbar" />
 
     <LinearLayout
         android:id="@+id/signuplinearlayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@+id/signuptoolbarimg"
-        tools:ignore="MissingConstraints"
-        android:layout_marginTop="20dp">
+        tools:ignore="MissingConstraints">
 
         <TextView
             android:layout_width="80dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
             android:text="아이디"
             android:textSize="20dp"
-            android:textStyle="bold"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="20dp"/>
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/id_ed"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="아이디를 입력해주세요."
-            android:textStyle="normal"
-            android:textSize="18dp"
             android:layout_marginStart="5dp"
-            android:layout_marginTop="20dp"            />
+            android:layout_marginTop="20dp"
+            android:maxLines="1"
+            android:text="아이디를 입력해주세요."
+            android:textSize="18dp"
+            android:textStyle="normal" />
 
         <Button
             android:id="@+id/dublecheck_btn"
@@ -90,22 +91,22 @@
         <TextView
             android:layout_width="80dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
             android:text="비밀번호"
             android:textSize="20dp"
-            android:textStyle="bold"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="20dp"/>
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/password_ed"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="비밀번호를 입력해주세요."
-            android:textStyle="normal"
-            android:textSize="18dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"            />
-
+            android:layout_marginTop="20dp"
+            android:maxLines="1"
+            android:text="비밀번호를 입력해주세요."
+            android:textSize="18dp"
+            android:textStyle="normal" />
 
 
     </LinearLayout>
@@ -121,22 +122,22 @@
         <TextView
             android:layout_width="80dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:maxLines="1"
             android:text="이름"
             android:textSize="20dp"
-            android:textStyle="bold"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="20dp"/>
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/name_ed"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="이름을 입력해주세요."
-            android:textStyle="normal"
-            android:textSize="18dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"            />
-
+            android:layout_marginTop="20dp"
+            android:text="이름을 입력해주세요."
+            android:textSize="18dp"
+            android:textStyle="normal" />
 
 
     </LinearLayout>
@@ -152,22 +153,25 @@
         <TextView
             android:layout_width="80dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
             android:text="MBTI"
             android:textSize="20dp"
-            android:textStyle="bold"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="20dp"/>
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/mbti_ed"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="MBTI를 입력해주세요."
-            android:textStyle="normal"
-            android:textSize="18dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"            />
-
+            android:layout_marginTop="20dp"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:inputType="textCapCharacters"
+            android:maxLength="4"
+            android:maxLines="1"
+            android:text="MBTI를 입력해주세요."
+            android:textSize="18dp"
+            android:textStyle="normal" />
 
 
     </LinearLayout>
@@ -183,22 +187,21 @@
         <TextView
             android:layout_width="80dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
             android:text="소개글"
             android:textSize="20dp"
-            android:textStyle="bold"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="20dp"/>
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/profile_ed"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="소개글을 입력해주세요."
-            android:textStyle="normal"
-            android:textSize="18dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"            />
-
+            android:layout_marginTop="20dp"
+            android:text="소개글을 입력해주세요."
+            android:textSize="18dp"
+            android:textStyle="normal" />
 
 
     </LinearLayout>
