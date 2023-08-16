@@ -20,8 +20,9 @@ class SiginUpActivity : AppCompatActivity() {
     private val mbti: EditText by lazy { findViewById(R.id.mbti_ed) }
     private val stateM: EditText by lazy { findViewById(R.id.profile_ed) }
 
-    private var nameCheck: Boolean = false
+    private var idCheck: Boolean = false
     private var mbtiCheck: Boolean = false
+    private var pswCheck: Boolean = false
 
     //지연초기화
     // 이 변수가 사용되는 시점에서 초기화가 된다.
@@ -29,8 +30,55 @@ class SiginUpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.sigin_up_activity)
 
-        mbtiWatcher(mbti)
+        mbti.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
 
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+                val text: TextView = findViewById(R.id.mbti_check_text)
+                if (!isMBTI(s.toString())) {
+                    text.text = "잘못된 MBTI입니다."
+                    mbtiCheck = false
+                } else {
+                    text.text = "올바른 MBTI입니다."
+                    mbtiCheck = true
+                }
+
+            }
+        })
+
+        psw.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+                val text: TextView = findViewById(R.id.psw_check_text)
+                val password = s.toString()
+
+                when {
+                    password.length < 8 || password.length > 15 -> {
+                        text.text = "비밀번호는 8자 이상 15자 이하여야합니다."
+                        pswCheck = false
+                    }
+
+                    else ->{
+                        text.text = "올바른 비밀번호입니다."
+                        pswCheck = true
+                    }
+
+                }
+            }
+        })
 
     }
 
@@ -40,12 +88,12 @@ class SiginUpActivity : AppCompatActivity() {
         if (userManager.userList.find { it.id == inputid } != null
             || inputid.isEmpty()) {
 
-           toast("불가능한 아이디입니다.")
-            nameCheck = false
+            toast("불가능한 아이디입니다.")
+            idCheck = false
 
-        } else{
+        } else {
             toast("사용 가능한 아이디입니다.")
-            nameCheck = true
+            idCheck = true
         }
     }
 
@@ -58,7 +106,9 @@ class SiginUpActivity : AppCompatActivity() {
         val inputstateM = stateM.text.toString()
 
         when {
-            nameCheck == false -> toast("아이디 중복 체크를 해주세요!!")
+            idCheck == false -> toast("아이디 중복 체크를 해주세요!!")
+
+            pswCheck == false -> toast("사용 가능한 비밀번호를 만들어주세요!!")
 
             checkEmpty(inputpsw) || checkEmpty(inputname) || checkEmpty(inputmbti)
             -> checkMessage(inputPsw = inputpsw, inputName = inputname, inputMBTI = inputmbti)
@@ -85,7 +135,6 @@ class SiginUpActivity : AppCompatActivity() {
     }
 
 
-
     fun checkMessage(inputPsw: String, inputName: String, inputMBTI: String) {
 
         when {
@@ -100,49 +149,26 @@ class SiginUpActivity : AppCompatActivity() {
 
             checkEmpty(inputPsw) -> toast("비밀번호를 확인해주세요")
 
-            checkEmpty(inputName) -> showDialog("이름",name)
+            checkEmpty(inputName) -> showDialog("이름", name)
 
-            checkEmpty(inputMBTI) -> showMBTIDialog("MBTI")
+            checkEmpty(inputMBTI) || mbtiCheck == false -> showMBTIDialog("MBTI")
 
         }
 
     }
 
-    fun toast(message: String) {
+    private fun toast(message: String) {
         Toast.makeText(applicationContext, message, Toast.LENGTH_SHORT).show()
     }
 
-    fun checkEmpty(id: String): Boolean {
+    private fun checkEmpty(id: String): Boolean {
         return id.trim().isEmpty()
     }
 
-    fun isMBTI(mbti: String): Boolean {
+    private fun isMBTI(mbti: String): Boolean {
         return mbti.matches(Regex("[EI][SN][TF][JP]"))
     }
 
-    fun mbtiWatcher(view: View) {
-        mbti.addTextChangedListener(object : TextWatcher {
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-
-            }
-
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-
-            }
-
-            override fun afterTextChanged(s: Editable?) {
-                val text:TextView = findViewById(R.id.mbti_check_text)
-                if(!isMBTI(s.toString())){
-                    text.text = "잘못된 MBTI입니다."
-                    mbtiCheck = false
-                }else{
-                    text.text = "올바른 MBTI입니다."
-                    mbtiCheck = true
-                }
-
-            }
-        })
-    }
 
     fun showMBTIDialog(title: String) {
         val builder: AlertDialog.Builder = AlertDialog.Builder(this)
@@ -170,7 +196,7 @@ class SiginUpActivity : AppCompatActivity() {
         dialog.show()
     }
 
-    fun showDialog(title: String,id:EditText) {
+    fun showDialog(title: String, id: EditText) {
         val builder: AlertDialog.Builder = AlertDialog.Builder(this)
         val inflater = layoutInflater
         val dialogView = inflater.inflate(R.layout.custom_text_dialog, null)
@@ -185,7 +211,7 @@ class SiginUpActivity : AppCompatActivity() {
             if (inputText.isNotEmpty()) {
                 id.setText(inputText)
                 dialog.dismiss()
-            }else{
+            } else {
                 toast("${title}을 입력해주세요")
             }
 
@@ -198,7 +224,6 @@ class SiginUpActivity : AppCompatActivity() {
         val dialog = builder.create()
         dialog.show()
     }
-
 
 
 }
