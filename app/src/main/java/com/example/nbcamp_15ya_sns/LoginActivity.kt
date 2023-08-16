@@ -26,10 +26,12 @@ class LoginActivity : AppCompatActivity() {
 
             if (strId.isNotEmpty() && strPwd.isNotEmpty()) {
                 val user = userList.find { it.id == strId && it.password == strPwd }
-
+                val userInfoTest = user.toString()
                 if (user != null) {
                     val intent = Intent(this, MainActivity::class.java)
-                    Toast.makeText(this,"로그인 성공!", Toast.LENGTH_SHORT).show()
+
+                    intent.putExtra("user", user)
+                    Toast.makeText(this,"${user.name}님 반갑습니다", Toast.LENGTH_SHORT).show()
                     startActivity(intent)
 
                 } else {
@@ -47,9 +49,7 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent(this, SiginUpActivity::class.java)
             startActivity(intent)
         }
-
         // TODO : 언어변경 기능 구현
-
     }
 }
 
