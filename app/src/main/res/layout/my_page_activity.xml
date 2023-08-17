@@ -281,12 +281,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="친구"
-            app:layout_constraintEnd_toEndOf="@+id/imageView3"
-            app:layout_constraintStart_toStartOf="@+id/imageView3"
-            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+            app:layout_constraintEnd_toEndOf="@+id/de_imageView3"
+            app:layout_constraintStart_toStartOf="@+id/de_imageView3"
+            app:layout_constraintTop_toBottomOf="@+id/de_imageView3" />
 
         <ImageView
-            android:id="@+id/imageView5"
+            android:id="@+id/de_imageView5"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginEnd="20dp"
@@ -296,7 +296,7 @@
             app:srcCompat="@drawable/ic_portrait_24" />
 
         <TextView
-            android:id="@+id/tv_main"
+            android:id="@+id/de_main"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="홈"
@@ -306,7 +306,7 @@
             app:layout_constraintStart_toStartOf="@+id/imageView4" />
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/de_imageView3"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="20dp"
@@ -316,13 +316,13 @@
             app:srcCompat="@drawable/ic_people_alt_24" />
 
         <TextView
-            android:id="@+id/tv_myPage"
+            android:id="@+id/de_myPage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="마이페이지"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/imageView5"
-            app:layout_constraintStart_toStartOf="@+id/imageView5" />
+            app:layout_constraintEnd_toEndOf="@+id/de_imageView5"
+            app:layout_constraintStart_toStartOf="@+id/de_imageView5" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView

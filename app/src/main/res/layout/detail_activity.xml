@@ -8,7 +8,7 @@
     tools:context=".DetailActivity">
 
     <ScrollView
-        android:id="@+id/scrollView"
+        android:id="@+id/de_scrollView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
@@ -21,7 +21,7 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/my_topbar"
+                android:id="@+id/de_topbar"
                 android:layout_width="match_parent"
                 android:layout_height="138dp"
                 android:background="#1F1F1F"
@@ -37,7 +37,7 @@
                 />
 
             <ImageView
-                android:id="@+id/my_backbutton"
+                android:id="@+id/de_backbutton"
                 android:layout_width="55dp"
                 android:layout_height="55dp"
                 android:layout_marginStart="20dp"
@@ -48,7 +48,7 @@
 
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/my_photo"
+                android:id="@+id/de_photo"
                 android:layout_width="76dp"
                 android:layout_height="76dp"
                 android:layout_marginStart="20dp"
@@ -60,12 +60,12 @@
                 app:civ_border_overlay="true"
                 app:civ_border_width="5dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/my_topbar"
+                app:layout_constraintTop_toBottomOf="@id/de_topbar"
 
                 tools:ignore="MissingClass" />
 
             <TextView
-                android:id="@+id/my_name"
+                android:id="@+id/de_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -74,12 +74,12 @@
                 android:textSize="26dp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/my_photo"
+                app:layout_constraintTop_toBottomOf="@+id/de_photo"
 
                 />
 
             <TextView
-                android:id="@+id/my_id"
+                android:id="@+id/de_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -88,34 +88,34 @@
                 android:textColor="#687684"
                 android:textSize="19dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/my_name"
+                app:layout_constraintTop_toBottomOf="@+id/de_name"
 
 
                 />
 
             <ImageView
-                android:id="@+id/my_bloglink_icon"
+                android:id="@+id/de_bloglink_icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="22dp"
                 android:layout_marginTop="8dp"
                 android:src="@drawable/ic_link_24"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/my_id" />
+                app:layout_constraintTop_toBottomOf="@id/de_id" />
 
             <TextView
-                android:id="@+id/my_bloglink_text"
+                android:id="@+id/de_bloglink_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:autoLink="web"
                 android:text="https://velog.io/@ghj6068"
                 android:textSize="17dp"
-                app:layout_constraintStart_toEndOf="@id/my_bloglink_icon"
-                app:layout_constraintTop_toTopOf="@id/my_bloglink_icon" />
+                app:layout_constraintStart_toEndOf="@id/de_bloglink_icon"
+                app:layout_constraintTop_toTopOf="@id/de_bloglink_icon" />
 
             <ImageView
-                android:id="@+id/my_githublink_icon"
+                android:id="@+id/de_githublink_icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="22dp"
@@ -123,22 +123,22 @@
                 android:layout_marginTop="0dp"
                 android:src="@drawable/ic_link_24"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/my_bloglink_icon" />
+                app:layout_constraintTop_toBottomOf="@id/de_bloglink_icon" />
 
 
             <TextView
-                android:id="@+id/my_githublink_text"
+                android:id="@+id/de_githublink_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:autoLink="web"
                 android:text="https://github.com/hosiker"
                 android:textSize="17dp"
-                app:layout_constraintStart_toEndOf="@id/my_githublink_icon"
-                app:layout_constraintTop_toTopOf="@id/my_githublink_icon" />
+                app:layout_constraintStart_toEndOf="@id/de_githublink_icon"
+                app:layout_constraintTop_toTopOf="@id/de_githublink_icon" />
 
             <TextView
-                android:id="@+id/my_stateM"
+                android:id="@+id/de_stateM"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -149,10 +149,10 @@
                 android:textColor="#1F1F1F"
                 android:textSize="21dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/my_githublink_icon" />
+                app:layout_constraintTop_toBottomOf="@+id/de_githublink_icon" />
 
             <Button
-                android:id="@+id/toggle_button"
+                android:id="@+id/de_toggle_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="132dp"
@@ -160,17 +160,17 @@
                 android:layout_marginTop="20dp"
                 android:src="@drawable/ic_link_24"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/my_bloglink_icon" />
+                app:layout_constraintTop_toBottomOf="@id/de_bloglink_icon" />
 
             <ImageView
-                android:id="@+id/my_hashtag1"
+                android:id="@+id/de_hashtag1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="8dp"
                 android:src="@drawable/ic_hashtag"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/my_stateM" />
+                app:layout_constraintTop_toBottomOf="@+id/de_stateM" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -178,21 +178,21 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="8dp"
                 android:text="MBTI는 ENFP입니다!!"
-                app:layout_constraintStart_toEndOf="@id/my_hashtag1"
-                app:layout_constraintTop_toBottomOf="@+id/my_stateM" />
+                app:layout_constraintStart_toEndOf="@id/de_hashtag1"
+                app:layout_constraintTop_toBottomOf="@+id/de_stateM" />
 
             <view
-                android:id="@+id/my_guideline1"
+                android:id="@+id/de_guideline1"
                 class="android.widget.ImageView"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginTop="12dp"
                 android:background="@android:color/darker_gray"
-                app:layout_constraintTop_toBottomOf="@+id/my_hashtag1" />
+                app:layout_constraintTop_toBottomOf="@+id/de_hashtag1" />
 
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/my_twitPhoto_1"
+                android:id="@+id/de_twitPhoto_1"
                 android:layout_width="55dp"
                 android:layout_height="55dp"
                 android:layout_marginStart="20dp"
@@ -205,7 +205,7 @@
                 app:layout_constraintStart_toStartOf="parent"
 
 
-                app:layout_constraintTop_toTopOf="@+id/my_guideline1" />
+                app:layout_constraintTop_toTopOf="@+id/de_guideline1" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -217,7 +217,7 @@
                 tools:layout_editor_absoluteY="435dp" />
 
             <TextView
-                android:id="@+id/my_twitText_1"
+                android:id="@+id/de_twitText_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="#ootd #오늘하루 #폭염주의보"
@@ -227,7 +227,7 @@
                 tools:layout_editor_absoluteY="457dp" />
 
             <TextView
-                android:id="@+id/my_twitId_1"
+                android:id="@+id/de_twitId_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="이호식"
@@ -238,17 +238,16 @@
                 tools:layout_editor_absoluteY="429dp" />
 
             <ImageView
-                android:id="@+id/my_twitImage_1"
+                android:id="@+id/de_twitImage_1"
                 android:layout_width="306dp"
                 android:layout_height="209dp"
-
 
                 android:src="@drawable/ic_play_button"
                 tools:layout_editor_absoluteX="84dp"
                 tools:layout_editor_absoluteY="489dp" />
 
             <TextView
-                android:id="@+id/textView8"
+                android:id="@+id/de_data"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="84dp"
@@ -259,7 +258,7 @@
                 app:layout_constraintTop_toTopOf="parent"></TextView>
 
             <ImageView
-                android:id="@+id/my_twitImage_2"
+                android:id="@+id/de_twitImage_2"
                 android:layout_width="306dp"
                 android:layout_height="209dp"
                 android:src="@drawable/ic_play_button"
@@ -282,7 +281,7 @@
 
 
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/de_imageView4"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:layout_marginBottom="20dp"
@@ -293,16 +292,16 @@
             app:srcCompat="@drawable/ic_home_24" />
 
         <TextView
-            android:id="@+id/tv_friend"
+            android:id="@+id/de_friend"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="친구"
-            app:layout_constraintEnd_toEndOf="@+id/imageView3"
-            app:layout_constraintStart_toStartOf="@+id/imageView3"
-            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+            app:layout_constraintEnd_toEndOf="@+id/de_imageView3"
+            app:layout_constraintStart_toStartOf="@+id/de_imageView3"
+            app:layout_constraintTop_toBottomOf="@+id/de_imageView3" />
 
         <ImageView
-            android:id="@+id/imageView5"
+            android:id="@+id/de_imageView5"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginEnd="20dp"
@@ -312,17 +311,17 @@
             app:srcCompat="@drawable/ic_portrait_24" />
 
         <TextView
-            android:id="@+id/tv_main"
+            android:id="@+id/de_main"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="홈"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintEnd_toEndOf="@+id/de_imageView4"
             app:layout_constraintHorizontal_bias="0.531"
-            app:layout_constraintStart_toStartOf="@+id/imageView4" />
+            app:layout_constraintStart_toStartOf="@+id/de_imageView4" />
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/de_imageView3"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="20dp"
@@ -332,13 +331,13 @@
             app:srcCompat="@drawable/ic_people_alt_24" />
 
         <TextView
-            android:id="@+id/tv_myPage"
+            android:id="@+id/de_myPage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="마이페이지"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/imageView5"
-            app:layout_constraintStart_toStartOf="@+id/imageView5" />
+            app:layout_constraintEnd_toEndOf="@+id/de_imageView5"
+            app:layout_constraintStart_toStartOf="@+id/de_imageView5" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
@@ -347,7 +346,7 @@
         android:text=""
 
 
-        app:layout_constraintTop_toBottomOf="@+id/scrollView"
+        app:layout_constraintTop_toBottomOf="@+id/de_scrollView"
         tools:layout_editor_absoluteX="0dp" />
 
 

@@ -6,23 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/topAppbar"
-        android:layout_width="match_parent"
-        android:layout_height="73dp"
-        android:background="@color/white"
+
+    <ImageView
+        android:id="@+id/login_logo"
+        android:layout_width="154dp"
+        android:layout_height="219dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_logo_15ya"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        >
-        <ImageView
-            android:layout_width="80dp"
-            android:layout_height="73dp"
-            android:src="@drawable/ic_logo_15ya"
-            android:layout_gravity="center">
+        app:layout_constraintTop_toTopOf="parent">
 
-        </ImageView>
-
-    </com.google.android.material.appbar.MaterialToolbar>
+    </ImageView>
 
     <TextView
         android:id="@+id/tv_welcome"
@@ -35,7 +31,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.789"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topAppbar" />
+        app:layout_constraintTop_toBottomOf="@+id/login_logo" />
 
     <TextView
         android:id="@+id/tv_id"
@@ -91,34 +87,14 @@
         app:layout_constraintTop_toBottomOf="@+id/et_pwd" />
 
     <TextView
-        android:id="@+id/tv_changeLanguage"
-        android:layout_width="71dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="130dp"
-        android:layout_marginTop="80dp"
-        android:text="언어 변경"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_login" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="38dp"
-        android:layout_height="34dp"
-        android:layout_marginStart="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_changeLanguage"
-        app:layout_constraintStart_toEndOf="@+id/tv_changeLanguage"
-        app:layout_constraintTop_toTopOf="@+id/tv_changeLanguage"
-        app:srcCompat="@drawable/ic_language" />
-
-    <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="40dp"
         android:text="계정이 없으신가요?"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_changeLanguage" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_login" />
 
     <TextView
         android:id="@+id/tv_register"
