@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         val tv_userName = findViewById<TextView>(R.id.tv_userName)
         val tv_stateMsg = findViewById<TextView>(R.id.tv_stateMsg)
         val myConstraintLayout = findViewById<ConstraintLayout>(R.id.myConstraintLayout)
+        val friendButton = findViewById<ImageView>(R.id.imageView3)
 
         // 1. 로그인 Activity로부터 유저 객체  받아오기
         val user = intent.getSerializableExtra("user") as User
@@ -35,6 +36,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "메인페이지 ${user.toString()}:", Toast.LENGTH_SHORT).show()
             startActivity(intent)
         }
+
 
     }
 }
