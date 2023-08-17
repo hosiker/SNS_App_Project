@@ -11,7 +11,7 @@
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout_my"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         tools:layout_editor_absoluteX="0dp">
@@ -42,6 +42,7 @@
                 android:layout_height="55dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
+                android:clickable="true"
                 android:src="@drawable/ic_back_button"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -98,41 +99,41 @@
                 android:id="@+id/my_bloglink_icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_link_24"
-                app:layout_constraintTop_toBottomOf="@id/my_id"
-                app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="22dp"
-                android:layout_marginTop="8dp"/>
+                android:layout_marginTop="8dp"
+                android:src="@drawable/ic_link_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/my_id" />
 
             <TextView
                 android:id="@+id/my_bloglink_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
                 android:text="https://velog.io/@velogID"
                 android:textSize="17dp"
                 app:layout_constraintStart_toEndOf="@id/my_bloglink_icon"
-                app:layout_constraintTop_toTopOf="@id/my_bloglink_icon"
-                android:layout_marginStart="5dp"/>
+                app:layout_constraintTop_toTopOf="@id/my_bloglink_icon" />
 
             <ImageView
                 android:id="@+id/my_githublink_icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_link_24"
-                app:layout_constraintTop_toBottomOf="@id/my_bloglink_icon"
-                app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="22dp"
-                android:layout_marginTop="0dp"/>
+                android:layout_marginTop="0dp"
+                android:src="@drawable/ic_link_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/my_bloglink_icon" />
 
             <TextView
                 android:id="@+id/my_githublink_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
                 android:text="https://github.com/githubID"
                 android:textSize="17dp"
                 app:layout_constraintStart_toEndOf="@id/my_githublink_icon"
-                app:layout_constraintTop_toTopOf="@id/my_githublink_icon"
-                android:layout_marginStart="5dp"/>
+                app:layout_constraintTop_toTopOf="@id/my_githublink_icon" />
 
             <TextView
                 android:id="@+id/my_stateM"
@@ -234,11 +235,9 @@
                 android:layout_width="306dp"
                 android:layout_height="209dp"
                 android:layout_marginStart="8dp"
-                android:src="@drawable/ic_play_button"
+                android:src="@drawable/cat1"
                 app:layout_constraintStart_toEndOf="@+id/my_twitPhoto_1"
                 app:layout_constraintTop_toBottomOf="@id/my_twitText_1"
-
-
                 />
 
             <ImageView
@@ -246,7 +245,8 @@
                 android:layout_width="306dp"
                 android:layout_height="209dp"
                 android:layout_marginStart="8dp"
-                android:src="@drawable/ic_play_button"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/cat2"
                 app:layout_constraintStart_toEndOf="@+id/my_twitPhoto_1"
                 app:layout_constraintTop_toBottomOf="@id/my_twitImage_1"
 
@@ -260,79 +260,118 @@
     </ScrollView>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
+        android:id="@+id/constraintLayout_my"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         app:layout_constraintBottom_toBottomOf="parent">
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerInParent="true"
+            android:background="#C5C5C5"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_marginBottom="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/ic_home_24" />
+        <androidx.constraintlayout.widget.ConstraintLayout
 
-        <TextView
-            android:id="@+id/tv_friend"
+            android:id="@+id/friend_constraintLayout_my"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="친구"
-            app:layout_constraintEnd_toEndOf="@+id/de_imageView3"
-            app:layout_constraintStart_toStartOf="@+id/de_imageView3"
-            app:layout_constraintTop_toBottomOf="@+id/de_imageView3" />
-
-        <ImageView
-            android:id="@+id/de_imageView5"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@drawable/ic_portrait_24" />
-
-        <TextView
-            android:id="@+id/de_main"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="홈"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/imageView4"
-            app:layout_constraintHorizontal_bias="0.531"
-            app:layout_constraintStart_toStartOf="@+id/imageView4" />
-
-        <ImageView
-            android:id="@+id/de_imageView3"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginTop="5dp"
+            android:clickable="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/ic_people_alt_24" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/de_myPage"
+            <ImageView
+                android:id="@+id/friend_my"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/ic_people_alt_24" />
+
+
+            <TextView
+                android:id="@+id/tv_friend_my"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="친구"
+                app:layout_constraintEnd_toEndOf="@+id/friend_my"
+                app:layout_constraintStart_toStartOf="@+id/friend_my"
+                app:layout_constraintTop_toBottomOf="@+id/friend_my" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/home_btn_my"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="마이페이지"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_main_my"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/ic_home_24" />
+
+
+            <TextView
+                android:id="@+id/de_main_my"
+                android:layout_width="15dp"
+                android:layout_height="21dp"
+                android:text="홈"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/iv_main_my"
+                app:layout_constraintHorizontal_bias="0.531"
+                app:layout_constraintStart_toStartOf="@+id/iv_main_my" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/nav_my_my"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="toMyPage"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/de_imageView5"
-            app:layout_constraintStart_toStartOf="@+id/de_imageView5" />
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_mypage_my"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:onClick="toMyPage"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/ic_portrait_24" />
+
+
+            <TextView
+                android:id="@+id/de_myPage_my"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="마이페이지"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/iv_mypage_my"
+                app:layout_constraintStart_toStartOf="@+id/iv_mypage_my" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text=""
-
-
-        app:layout_constraintTop_toBottomOf="@+id/scrollView"
-        tools:layout_editor_absoluteX="0dp" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
