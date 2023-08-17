@@ -45,6 +45,7 @@ class MyPageActivity : AppCompatActivity() {
 
         friendBtn.setOnClickListener{
             val gofriend = Intent(this,UserListActivity::class.java)
+            gofriend.putExtra("user",userME)
             startActivity(gofriend)
         }
 
