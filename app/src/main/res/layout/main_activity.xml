@@ -91,27 +91,32 @@
                 android:layout_width="0dp"
                 android:layout_height="90dp"
                 android:layout_marginTop="20dp"
+                android:clickable="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/myConstraintLayout">
 
 
-                <ImageView
-                    android:id="@+id/imageView7"
-                    android:layout_width="42dp"
-                    android:layout_height="37dp"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="10dp"
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/cir_dummy1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="16dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/newjeans"
+                    app:civ_border_color="#FFFFFF"
+                    app:civ_border_overlay="false"
+                    app:civ_border_width="2dp"
                     app:layout_constraintEnd_toStartOf="@+id/textView2"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/newjeans" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/textView2"
                     android:layout_width="327dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
                     android:ellipsize="end"
                     android:maxLines="4"
                     android:text="NewJeans \nComing Soon!\nNewJeans 2nd EP 'Get Up'\n
@@ -120,12 +125,11 @@
 2023.6.19. 11AM KST\n
 #Time_to_NewJeans\n
 #NewJeans #뉴진스 #NewJeans_2nd_EP"
-                    app:layout_constraintStart_toEndOf="@+id/imageView7"
-                    app:layout_constraintTop_toTopOf="@+id/imageView7" />
+                    app:layout_constraintStart_toEndOf="@+id/cir_dummy1"
+                    app:layout_constraintTop_toTopOf="@+id/cir_dummy1" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <!--   게시물 2  -->
-
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout4"
                 android:layout_width="0dp"
@@ -307,6 +311,7 @@
 #NewJeans #뉴진스 #NewJeans_2nd_EP"
                     app:layout_constraintStart_toEndOf="@+id/imageView12"
                     app:layout_constraintTop_toTopOf="@+id/imageView12" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
@@ -322,67 +327,102 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
 
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginBottom="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/ic_home_24" />
-
-
-        <TextView
-            android:id="@+id/tv_friend"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/friend_constraintLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="친구"
-            app:layout_constraintEnd_toEndOf="@+id/imageView3"
-            app:layout_constraintStart_toStartOf="@+id/imageView3"
-            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/friend"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/ic_people_alt_24" />
 
 
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
+            <TextView
+                android:id="@+id/tv_friend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="친구"
+                app:layout_constraintEnd_toEndOf="@+id/friend"
+                app:layout_constraintStart_toStartOf="@+id/friend"
+                app:layout_constraintTop_toBottomOf="@+id/friend" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_main"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/ic_home_24" />
+
+
+            <TextView
+                android:id="@+id/tv_main"
+                android:layout_width="15dp"
+                android:layout_height="21dp"
+                android:text="홈"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/iv_main"
+                app:layout_constraintHorizontal_bias="0.531"
+                app:layout_constraintStart_toStartOf="@+id/iv_main" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/nav_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            android:clickable="true"
             android:onClick="toMyPage"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@drawable/ic_portrait_24" />
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_mypage"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:onClick="toMyPage"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/ic_portrait_24" />
 
 
-        <TextView
-            android:id="@+id/tv_main"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="홈"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/imageView4"
-            app:layout_constraintHorizontal_bias="0.531"
-            app:layout_constraintStart_toStartOf="@+id/imageView4" />
+            <TextView
+                android:id="@+id/tv_myPage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="마이페이지"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/iv_mypage"
+                app:layout_constraintStart_toStartOf="@+id/iv_mypage" />
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginBottom="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/ic_people_alt_24" />
-
-        <TextView
-            android:id="@+id/tv_myPage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="마이페이지"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/imageView5"
-            app:layout_constraintStart_toStartOf="@+id/imageView5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

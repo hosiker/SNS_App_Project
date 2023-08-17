@@ -29,6 +29,19 @@ class MainActivity : AppCompatActivity() {
         tv_userName.text = ("${user.name}")
         tv_stateMsg.text = ("${user.stateM}")
 
+        val friend_constraintLayout = findViewById<ConstraintLayout>(R.id.friend_constraintLayout)
+        friend_constraintLayout.setOnClickListener {
+            val intent = Intent(this, UserListActivity::class.java)
+            startActivity(intent)
+        }
+
+        // 3. 첫번째 더미 게시글 클릭시 화면 전환
+        val constraintLayout3 = findViewById<ConstraintLayout>(R.id.constraintLayout3)
+        constraintLayout3.setOnClickListener {
+            val intent = Intent(this, DetailActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     fun toMyPage(view: View) {
