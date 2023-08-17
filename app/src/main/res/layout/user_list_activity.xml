@@ -82,8 +82,10 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/friend_list1"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:clickable="true">
 
                     <FrameLayout
                         android:layout_width="70dp"
@@ -94,13 +96,13 @@
                         tools:ignore="NotSibling" />
 
                     <de.hdodenhof.circleimageview.CircleImageView
-                        android:padding="2dp"
                         android:id="@+id/userlist_user1_photo"
                         android:layout_width="70dp"
                         android:layout_height="70dp"
                         android:layout_marginTop="12dp"
                         android:layout_marginEnd="20dp"
                         android:layout_marginBottom="12dp"
+                        android:padding="2dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/ic_launcher_background"
                         app:civ_border_color="@color/design_default_color_background"
@@ -161,8 +163,10 @@
                 app:layout_constraintTop_toBottomOf="@id/userlist_user1_cardview">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/friend_list2"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:clickable="true">
 
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/userlist_user2_photo"
@@ -233,8 +237,10 @@
                 app:layout_constraintTop_toBottomOf="@id/userlist_user2_cardview">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/friend_list3"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:clickable="true">
 
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/userlist_user3_photo"
@@ -306,8 +312,10 @@
                 app:layout_constraintTop_toBottomOf="@id/userlist_user3_cardview">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/friend_list4"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:clickable="true">
 
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/userlist_user4_photo"
@@ -379,8 +387,10 @@
                 app:layout_constraintTop_toBottomOf="@id/userlist_user4_cardview">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/friend_list5"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:clickable="true">
 
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/userlist_user5_photo"
