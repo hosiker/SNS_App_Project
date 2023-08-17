@@ -23,6 +23,13 @@ class UserListActivity : AppCompatActivity() {
         toss(view = friendListJisung, friend = "jisung", friendInfo = friendManager.friendList[3])
         toss(view = friendListJaeyong, friend = "jaeyoung", friendInfo = friendManager.friendList[4])
 
+        val homeBtn = findViewById<ConstraintLayout>(R.id.home_btn_list)
+
+        homeBtn.setOnClickListener{
+            val toHome = Intent(this, MainActivity::class.java)
+            startActivity(toHome)
+        }
+
 
     }
     fun toss(view:View,friend:String,friendInfo:Friend){
