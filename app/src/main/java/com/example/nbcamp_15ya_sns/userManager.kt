@@ -5,7 +5,7 @@ object userManager {
     var userList = mutableListOf<User>()
 
     init {
-        userList.add(User("test","test","test","test","test"))
+        userList.add(User("test","test","test","test","Good Morning!"))
     }
 
 }
