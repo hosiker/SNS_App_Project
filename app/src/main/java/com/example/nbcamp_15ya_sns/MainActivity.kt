@@ -49,7 +49,9 @@ class MainActivity : AppCompatActivity() {
     fun toMyPage(view: View) {
 
         val intent = Intent(this, MyPageActivity::class.java)
+        val myimg = R.drawable.iu
         intent.putExtra("user", user)
+        intent.putExtra("img",myimg)
         startActivity(intent)
 
 
