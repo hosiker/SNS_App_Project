@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".DetailActivity">
 
-
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
@@ -350,5 +349,6 @@
 
         app:layout_constraintTop_toBottomOf="@+id/scrollView"
         tools:layout_editor_absoluteX="0dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

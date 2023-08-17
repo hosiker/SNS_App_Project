@@ -21,8 +21,7 @@ class MainActivity : AppCompatActivity() {
 
         val tv_userName = findViewById<TextView>(R.id.tv_userName)
         val tv_stateMsg = findViewById<TextView>(R.id.tv_stateMsg)
-        val myConstraintLayout = findViewById<ConstraintLayout>(R.id.myConstraintLayout)
-        val friendButton = findViewById<ImageView>(R.id.imageView3)
+
 
         // 1. 로그인 Activity로부터 유저 객체  받아오기
 
@@ -31,10 +30,17 @@ class MainActivity : AppCompatActivity() {
         tv_userName.text = ("${user.name}")
         tv_stateMsg.text = ("${user.stateM}")
 
-        // 3. 내 정보 클릭 시 마이페이지로 전환 및 유저 객체 전달
-        myConstraintLayout.setOnClickListener {
+        val friend_constraintLayout = findViewById<ConstraintLayout>(R.id.friend_constraintLayout)
+        friend_constraintLayout.setOnClickListener {
+            val intent = Intent(this, UserListActivity::class.java)
+            startActivity(intent)
+        }
 
-
+        // 3. 첫번째 더미 게시글 클릭시 화면 전환
+        val constraintLayout3 = findViewById<ConstraintLayout>(R.id.constraintLayout3)
+        constraintLayout3.setOnClickListener {
+            val intent = Intent(this, DetailActivity::class.java)
+            startActivity(intent)
         }
 
 
@@ -44,7 +50,6 @@ class MainActivity : AppCompatActivity() {
 
         val intent = Intent(this, MyPageActivity::class.java)
         intent.putExtra("user", user)
-//        Toast.makeText(this, "메인페이지 ${user.toString()}:", Toast.LENGTH_SHORT).show()
         startActivity(intent)
 
 
