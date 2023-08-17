@@ -26,6 +26,7 @@ class UserListActivity : AppCompatActivity() {
 
         val homeBtn = findViewById<ConstraintLayout>(R.id.home_btn_list)
         val backBtn = findViewById<ImageView>(R.id.userlist_backButton)
+        val myBtn = findViewById<ConstraintLayout>(R.id.navi_my_list)
 
         homeBtn.setOnClickListener{
             val toHome = Intent(this, MainActivity::class.java)
@@ -33,6 +34,10 @@ class UserListActivity : AppCompatActivity() {
         }
         backBtn.setOnClickListener{
             finish()
+        }
+        myBtn.setOnClickListener{
+            val toMy = Intent(this,MyPageActivity::class.java)
+            startActivity(toMy)
         }
 
 
