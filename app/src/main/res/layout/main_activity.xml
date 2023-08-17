@@ -332,6 +332,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:srcCompat="@drawable/ic_home_24" />
 
+
         <TextView
             android:id="@+id/tv_friend"
             android:layout_width="wrap_content"
@@ -340,6 +341,7 @@
             app:layout_constraintEnd_toEndOf="@+id/imageView3"
             app:layout_constraintStart_toStartOf="@+id/imageView3"
             app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
 
         <ImageView
             android:id="@+id/imageView5"
@@ -350,6 +352,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:srcCompat="@drawable/ic_portrait_24" />
+
 
         <TextView
             android:id="@+id/tv_main"

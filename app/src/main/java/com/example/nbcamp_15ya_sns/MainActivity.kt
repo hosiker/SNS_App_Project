@@ -7,11 +7,14 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
+import android.widget.ImageView
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
+
 
         val tv_userName = findViewById<TextView>(R.id.tv_userName)
         val tv_stateMsg = findViewById<TextView>(R.id.tv_stateMsg)
@@ -32,5 +35,6 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "메인페이지 ${user.toString()}:", Toast.LENGTH_SHORT).show()
             startActivity(intent)
         }
+
     }
 }

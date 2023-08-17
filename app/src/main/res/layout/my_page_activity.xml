@@ -4,6 +4,334 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MyPageActivity">
+    tools:context=".DetailActivity">
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/my_topbar"
+                android:layout_width="match_parent"
+                android:layout_height="138dp"
+                android:background="#1F1F1F"
+                android:gravity="center"
+                android:text="NBcamp_15ya"
+                android:textColor="#FFFFFF"
+                android:textSize="26dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
+            <ImageView
+                android:id="@+id/my_backbutton"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_back_button"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/my_photo"
+                android:layout_width="76dp"
+                android:layout_height="76dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="-25dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_background"
+                app:civ_border_color="#FFFFFF"
+
+                app:civ_border_overlay="true"
+                app:civ_border_width="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/my_topbar"
+
+                />
+
+            <TextView
+                android:id="@+id/my_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Name"
+                android:textColor="#1F1F1F"
+                android:textSize="26dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/my_photo"
+
+                />
+
+            <TextView
+                android:id="@+id/my_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="0dp"
+                android:text="\@Id"
+                android:textColor="#687684"
+                android:textSize="19dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/my_name"
+
+
+                />
+
+            <ImageView
+                android:id="@+id/my_bloglink_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_link_24"
+                app:layout_constraintTop_toBottomOf="@id/my_id"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/my_bloglink_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="https://velog.io/@velogID"
+                android:textSize="17dp"
+                app:layout_constraintStart_toEndOf="@id/my_bloglink_icon"
+                app:layout_constraintTop_toTopOf="@id/my_bloglink_icon"
+                android:layout_marginStart="5dp"/>
+
+            <ImageView
+                android:id="@+id/my_githublink_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_link_24"
+                app:layout_constraintTop_toBottomOf="@id/my_bloglink_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="0dp"/>
+
+            <TextView
+                android:id="@+id/my_githublink_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="https://github.com/githubID"
+                android:textSize="17dp"
+                app:layout_constraintStart_toEndOf="@id/my_githublink_icon"
+                app:layout_constraintTop_toTopOf="@id/my_githublink_icon"
+                android:layout_marginStart="5dp"/>
+
+            <TextView
+                android:id="@+id/my_stateM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:text="상태메세지 123123 안녕하세요!!"
+
+                android:textColor="#1F1F1F"
+                android:textSize="21dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/my_githublink_icon" />
+
+            <ImageView
+                android:id="@+id/my_hashtag1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/ic_hashtag"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/my_stateM" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="8dp"
+                android:text="MBTI는 @@@@입니다!!"
+                app:layout_constraintStart_toEndOf="@id/my_hashtag1"
+                app:layout_constraintTop_toBottomOf="@+id/my_stateM" />
+
+            <view
+                android:id="@+id/my_guideline1"
+                class="android.widget.ImageView"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintTop_toBottomOf="@+id/my_hashtag1" />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/my_twitPhoto_1"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="32dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_background"
+                app:civ_border_color="#E91E63"
+                app:civ_border_overlay="true"
+                app:civ_border_width="3dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/my_guideline1"
+
+
+                />
+
+
+            <TextView
+                android:id="@+id/my_twitId_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:text="Name"
+                android:textSize="19dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/my_twitPhoto_1"
+
+                app:layout_constraintTop_toTopOf="@+id/my_guideline1"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" \@Id"
+                android:textSize="16sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/my_twitId_1"
+                app:layout_constraintStart_toEndOf="@+id/my_twitId_1" />
+
+            <TextView
+                android:id="@+id/my_twitText_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="테스트 메세지입니다~~~~"
+                app:layout_constraintStart_toEndOf="@+id/my_twitPhoto_1"
+                app:layout_constraintTop_toBottomOf="@+id/my_twitId_1"
+
+                />
+
+            <ImageView
+                android:id="@+id/my_twitImage_1"
+                android:layout_width="306dp"
+                android:layout_height="209dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/ic_play_button"
+                app:layout_constraintStart_toEndOf="@+id/my_twitPhoto_1"
+                app:layout_constraintTop_toBottomOf="@id/my_twitText_1"
+
+
+                />
+
+            <ImageView
+                android:id="@+id/my_twitImage_2"
+                android:layout_width="306dp"
+                android:layout_height="209dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/ic_play_button"
+                app:layout_constraintStart_toEndOf="@+id/my_twitPhoto_1"
+                app:layout_constraintTop_toBottomOf="@id/my_twitImage_1"
+
+
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_home_24" />
+
+        <TextView
+            android:id="@+id/tv_friend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="친구"
+            app:layout_constraintEnd_toEndOf="@+id/imageView3"
+            app:layout_constraintStart_toStartOf="@+id/imageView3"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_portrait_24" />
+
+        <TextView
+            android:id="@+id/tv_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="홈"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintHorizontal_bias="0.531"
+            app:layout_constraintStart_toStartOf="@+id/imageView4" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_people_alt_24" />
+
+        <TextView
+            android:id="@+id/tv_myPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="마이페이지"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/imageView5"
+            app:layout_constraintStart_toStartOf="@+id/imageView5" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+
+
+        app:layout_constraintTop_toBottomOf="@+id/scrollView"
+        tools:layout_editor_absoluteX="0dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
