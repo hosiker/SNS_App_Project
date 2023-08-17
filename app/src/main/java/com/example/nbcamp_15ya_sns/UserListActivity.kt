@@ -18,11 +18,11 @@ class UserListActivity : AppCompatActivity() {
         val friendListJisung = findViewById<ConstraintLayout>(R.id.friend_list4)
         val friendListJaeyong = findViewById<ConstraintLayout>(R.id.friend_list5)
 
-        toss(view = friendListHosick, friend = "hosick", friendInfo = friendManager.friendList[0])
-        toss(view = friendListGyujin, friend = "gyujin", friendInfo = friendManager.friendList[1])
-        toss(view = friendListSeungyoon, friend = "seingyoon", friendInfo = friendManager.friendList[2])
-        toss(view = friendListJisung, friend = "jisung", friendInfo = friendManager.friendList[3])
-        toss(view = friendListJaeyong, friend = "jaeyoung", friendInfo = friendManager.friendList[4])
+        toss(view = friendListHosick, friend = "hosick", friendInfo = friendManager.friendList[0],"img1",R.drawable.hosick)
+        toss(view = friendListGyujin, friend = "gyujin", friendInfo = friendManager.friendList[1],"img2",R.drawable.gyujin)
+        toss(view = friendListSeungyoon, friend = "seingyoon", friendInfo = friendManager.friendList[2],"img3",R.drawable.seungyoon)
+        toss(view = friendListJisung, friend = "jisung", friendInfo = friendManager.friendList[3],"img4",R.drawable.jisung)
+        toss(view = friendListJaeyong, friend = "jaeyoung", friendInfo = friendManager.friendList[4],"img5",R.drawable.jaeyong)
 
         val homeBtn = findViewById<ConstraintLayout>(R.id.home_btn_list)
         val backBtn = findViewById<ImageView>(R.id.userlist_backButton)
@@ -37,13 +37,13 @@ class UserListActivity : AppCompatActivity() {
 
 
     }
-    fun toss(view:View,friend:String,friendInfo:Friend){
+    fun toss(view:View,friend:String,friendInfo:Friend,imgN:String,myimg:Int){
 
         view.setOnClickListener{
 
             val intent = Intent(this, DetailActivity::class.java)
-
             intent.putExtra(friend,friendInfo)
+            intent.putExtra(imgN,myimg)
             startActivity(intent)
 
         }
