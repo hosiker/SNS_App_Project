@@ -47,6 +47,14 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+            <FrameLayout
+                android:layout_width="76dp"
+                android:layout_height="76dp"
+                android:foreground="@drawable/rainbow"
+                app:layout_constraintStart_toStartOf="@id/my_photo"
+                app:layout_constraintTop_toTopOf="@id/my_photo"
+                tools:ignore="NotSibling" />
+
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/my_photo"
@@ -54,6 +62,7 @@
                 android:layout_height="76dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="-25dp"
+                android:padding="2dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/ic_launcher_background"
                 app:civ_border_color="#FFFFFF"
@@ -177,6 +186,14 @@
                 android:background="@android:color/darker_gray"
                 app:layout_constraintTop_toBottomOf="@+id/my_hashtag1" />
 
+            <FrameLayout
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:foreground="@drawable/rainbow"
+                app:layout_constraintStart_toStartOf="@id/my_twitPhoto_1"
+                app:layout_constraintTop_toTopOf="@id/my_twitPhoto_1"
+                tools:ignore="NotSibling" />
+
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/my_twitPhoto_1"
@@ -184,9 +201,10 @@
                 android:layout_height="55dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="32dp"
+                android:padding="2dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/ic_launcher_background"
-                app:civ_border_color="#E91E63"
+                app:civ_border_color="@color/design_default_color_background"
                 app:civ_border_overlay="true"
                 app:civ_border_width="3dp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -237,8 +255,7 @@
                 android:layout_marginStart="8dp"
                 android:src="@drawable/cat1"
                 app:layout_constraintStart_toEndOf="@+id/my_twitPhoto_1"
-                app:layout_constraintTop_toBottomOf="@id/my_twitText_1"
-                />
+                app:layout_constraintTop_toBottomOf="@id/my_twitText_1" />
 
             <ImageView
                 android:id="@+id/my_twitImage_2"
