@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageView
 import androidx.constraintlayout.widget.ConstraintLayout
 
 class UserListActivity : AppCompatActivity() {
@@ -24,10 +25,14 @@ class UserListActivity : AppCompatActivity() {
         toss(view = friendListJaeyong, friend = "jaeyoung", friendInfo = friendManager.friendList[4])
 
         val homeBtn = findViewById<ConstraintLayout>(R.id.home_btn_list)
+        val backBtn = findViewById<ImageView>(R.id.userlist_backButton)
 
         homeBtn.setOnClickListener{
             val toHome = Intent(this, MainActivity::class.java)
             startActivity(toHome)
+        }
+        backBtn.setOnClickListener{
+            finish()
         }
 
 
@@ -39,7 +44,6 @@ class UserListActivity : AppCompatActivity() {
             val intent = Intent(this, DetailActivity::class.java)
 
             intent.putExtra(friend,friendInfo)
-
             startActivity(intent)
 
         }
