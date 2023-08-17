@@ -104,7 +104,7 @@
                         android:layout_marginBottom="12dp"
                         android:padding="2dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/ic_launcher_background"
+                        android:src="@drawable/hosick"
                         app:civ_border_color="@color/design_default_color_background"
                         app:civ_border_overlay="true"
                         app:civ_border_width="3dp"
@@ -167,18 +167,25 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:clickable="true">
+                    <FrameLayout
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:foreground="@drawable/rainbow"
+                        app:layout_constraintStart_toStartOf="@id/userlist_user2_photo"
+                        app:layout_constraintTop_toTopOf="@id/userlist_user2_photo"
+                        tools:ignore="NotSibling" />
 
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/userlist_user2_photo"
                         android:layout_width="70dp"
                         android:layout_height="70dp"
-
+                        android:padding="2dp"
                         android:layout_marginTop="12dp"
                         android:layout_marginEnd="20dp"
                         android:layout_marginBottom="12dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/ic_launcher_background"
-                        app:civ_border_color="#E91E63"
+                        android:src="@drawable/gyujin"
+                        app:civ_border_color="@color/design_default_color_background"
                         app:civ_border_overlay="true"
                         app:civ_border_width="3dp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -241,18 +248,24 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:clickable="true">
-
+                    <FrameLayout
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:foreground="@drawable/rainbow"
+                        app:layout_constraintStart_toStartOf="@id/userlist_user3_photo"
+                        app:layout_constraintTop_toTopOf="@id/userlist_user3_photo"
+                        tools:ignore="NotSibling" />
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/userlist_user3_photo"
                         android:layout_width="70dp"
                         android:layout_height="70dp"
-
+                        android:padding="2dp"
                         android:layout_marginTop="12dp"
                         android:layout_marginEnd="20dp"
                         android:layout_marginBottom="12dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/ic_launcher_background"
-                        app:civ_border_color="#E91E63"
+                        android:src="@drawable/seungyoon"
+                        app:civ_border_color="@color/design_default_color_background"
                         app:civ_border_overlay="true"
                         app:civ_border_width="3dp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -316,18 +329,25 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:clickable="true">
+                    <FrameLayout
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:foreground="@drawable/rainbow"
+                        app:layout_constraintStart_toStartOf="@id/userlist_user4_photo"
+                        app:layout_constraintTop_toTopOf="@id/userlist_user4_photo"
+                        tools:ignore="NotSibling" />
 
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/userlist_user4_photo"
                         android:layout_width="70dp"
                         android:layout_height="70dp"
-
+                        android:padding="2dp"
                         android:layout_marginTop="12dp"
                         android:layout_marginEnd="20dp"
                         android:layout_marginBottom="12dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/ic_launcher_background"
-                        app:civ_border_color="#E91E63"
+                        android:src="@drawable/jisung"
+                        app:civ_border_color="@color/design_default_color_background"
                         app:civ_border_overlay="true"
                         app:civ_border_width="3dp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -391,18 +411,25 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:clickable="true">
+                    <FrameLayout
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:foreground="@drawable/rainbow"
+                        app:layout_constraintStart_toStartOf="@id/userlist_user5_photo"
+                        app:layout_constraintTop_toTopOf="@id/userlist_user5_photo"
+                        tools:ignore="NotSibling" />
 
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/userlist_user5_photo"
                         android:layout_width="70dp"
                         android:layout_height="70dp"
-
+                        android:padding="2dp"
                         android:layout_marginTop="12dp"
                         android:layout_marginEnd="20dp"
                         android:layout_marginBottom="12dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/ic_launcher_background"
-                        app:civ_border_color="#E91E63"
+                        android:src="@drawable/jaeyong"
+                        app:civ_border_color="@color/design_default_color_background"
                         app:civ_border_overlay="true"
                         app:civ_border_width="3dp"
                         app:layout_constraintBottom_toBottomOf="parent"
