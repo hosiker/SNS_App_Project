@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         val tv_userName = findViewById<TextView>(R.id.tv_userName)
         val tv_stateMsg = findViewById<TextView>(R.id.tv_stateMsg)
 
+
         // 1. 로그인 Activity로부터 유저 객체  받아오기
 
 
@@ -41,6 +42,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, DetailActivity::class.java)
             startActivity(intent)
         }
+
 
     }
 
