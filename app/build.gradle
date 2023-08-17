@@ -42,5 +42,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'com.ms-square:expandableTextView:0.1.4' // 더보기 기능
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:12.1.0' // 유튜브 view 만들수 있음
 
 }

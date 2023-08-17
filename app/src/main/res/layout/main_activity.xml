@@ -95,9 +95,9 @@
 
             <!--  게시물  -->
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout3"
+                android:id="@+id/main_constraintLayout3"
                 android:layout_width="0dp"
-                android:layout_height="90dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:clickable="true"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -107,58 +107,96 @@
 
 
                 <View
+                    android:id="@+id/main_topline"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_centerInParent="true"
                     android:background="#C5C5C5"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- 트윗1  -->
 
                 <FrameLayout
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
                     android:foreground="@drawable/rainbow"
-                    app:layout_constraintStart_toStartOf="@id/cir_dummy1"
-                    app:layout_constraintTop_toTopOf="@id/cir_dummy1"
+                    app:layout_constraintStart_toStartOf="@id/main_twit1_userphoto"
+                    app:layout_constraintTop_toTopOf="@id/main_twit1_userphoto"
                     tools:ignore="NotSibling" />
 
 
                 <de.hdodenhof.circleimageview.CircleImageView
-                    android:layout_marginTop="10dp"
-                    android:id="@+id/cir_dummy1"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="16dp"
+                    android:id="@+id/main_twit1_userphoto"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="12dp"
                     android:padding="2dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/newjeans"
                     app:civ_border_color="@color/design_default_color_background"
                     app:civ_border_overlay="false"
                     app:civ_border_width="2dp"
-                    app:layout_constraintEnd_toStartOf="@+id/textView2"
+                    app:layout_constraintEnd_toStartOf="@+id/main_twit1"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="327dp"
+                    android:id="@+id/main_twit1_name"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="12dp"
+                    android:text="Name"
+                    android:textSize="19dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/main_twit1_userphoto"
+                    app:layout_constraintTop_toBottomOf="@+id/main_topline"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" \@Id"
+                    android:textSize="16sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/main_twit1_name"
+                    app:layout_constraintStart_toEndOf="@+id/main_twit1_name" />
+
+                <TextView
+                    android:id="@+id/main_twit1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
                     android:ellipsize="end"
-                    android:maxLines="4"
-                    android:text="NewJeans \nComing Soon!\nNewJeans 2nd EP 'Get Up'\n
-🗓 2023.7.7. Pre-Release\n🗓 2023.7.21. 2nd EP 'Get Up' Release
-✅ Pre-Order\n
-2023.6.19. 11AM KST\n
-#Time_to_NewJeans\n
-#NewJeans #뉴진스 #NewJeans_2nd_EP"
-                    app:layout_constraintStart_toEndOf="@+id/cir_dummy1"
-                    app:layout_constraintTop_toTopOf="@+id/cir_dummy1" />
+                    android:text="아 역시 유해진님 나오니까 너무 편하고 웃기고 \n유쾌함..ㅋㅋㅋㅋㅋㅋㅋ
+                    \n#채널십오야 #나불나불 #유해진"
+                    app:layout_constraintStart_toEndOf="@+id/main_twit1_userphoto"
+                    app:layout_constraintTop_toBottomOf="@+id/main_twit1_name" />
+
+                <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="83dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="12dp"
+
+                    app:autoPlay="false"
+                    app:layout_constraintBottom_toTopOf="@+id/main_twit1_line"
+                    app:layout_constraintTop_toBottomOf="@+id/main_twit1"
+                    app:videoId="GMilUvkr07Q"
+
+                    />
+
+
                 <View
+                    android:id="@+id/main_twit1_line"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_centerInParent="true"
                     android:background="#C5C5C5"
-                    app:layout_constraintBottom_toBottomOf="parent"/>
+                    app:layout_constraintBottom_toBottomOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -169,7 +207,7 @@
                 android:layout_height="90dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+                app:layout_constraintTop_toBottomOf="@+id/main_constraintLayout3">
 
                 <FrameLayout
                     android:layout_width="40dp"
@@ -180,11 +218,11 @@
                     tools:ignore="NotSibling" />
 
                 <de.hdodenhof.circleimageview.CircleImageView
-                    android:layout_marginTop="10dp"
                     android:id="@+id/imageView8"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
                     android:padding="2dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/newjeans"
@@ -210,12 +248,13 @@
 #NewJeans #뉴진스 #NewJeans_2nd_EP"
                     app:layout_constraintStart_toEndOf="@+id/imageView8"
                     app:layout_constraintTop_toTopOf="@+id/imageView8" />
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_centerInParent="true"
                     android:background="#C5C5C5"
-                    app:layout_constraintBottom_toBottomOf="parent"/>
+                    app:layout_constraintBottom_toBottomOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -237,11 +276,11 @@
                     tools:ignore="NotSibling" />
 
                 <de.hdodenhof.circleimageview.CircleImageView
-                    android:layout_marginTop="10dp"
                     android:id="@+id/imageView9"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
                     android:padding="2dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/newjeans"
@@ -267,12 +306,13 @@
 #NewJeans #뉴진스 #NewJeans_2nd_EP"
                     app:layout_constraintStart_toEndOf="@+id/imageView9"
                     app:layout_constraintTop_toTopOf="@+id/imageView9" />
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_centerInParent="true"
                     android:background="#C5C5C5"
-                    app:layout_constraintBottom_toBottomOf="parent"/>
+                    app:layout_constraintBottom_toBottomOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -294,11 +334,11 @@
                     tools:ignore="NotSibling" />
 
                 <de.hdodenhof.circleimageview.CircleImageView
-                    android:layout_marginTop="10dp"
                     android:id="@+id/imageView10"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
                     android:padding="2dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/newjeans"
@@ -324,12 +364,13 @@
 #NewJeans #뉴진스 #NewJeans_2nd_EP"
                     app:layout_constraintStart_toEndOf="@+id/imageView10"
                     app:layout_constraintTop_toTopOf="@+id/imageView10" />
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_centerInParent="true"
                     android:background="#C5C5C5"
-                    app:layout_constraintBottom_toBottomOf="parent"/>
+                    app:layout_constraintBottom_toBottomOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -352,11 +393,11 @@
                     tools:ignore="NotSibling" />
 
                 <de.hdodenhof.circleimageview.CircleImageView
-                    android:layout_marginTop="10dp"
                     android:id="@+id/imageView11"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
                     android:padding="2dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/newjeans"
@@ -394,23 +435,24 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_marginTop="5dp"
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         app:layout_constraintBottom_toBottomOf="parent">
+
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_centerInParent="true"
             android:background="#C5C5C5"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_marginTop="5dp"
             android:id="@+id/friend_constraintLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:clickable="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -441,9 +483,9 @@
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_marginTop="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
