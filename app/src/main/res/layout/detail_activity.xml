@@ -84,7 +84,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="0dp"
-                android:text="\@Owler"
+                android:text="\@junior @Enjoy :)"
                 android:textColor="#687684"
                 android:textSize="19dp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -139,12 +139,12 @@
 
             <TextView
                 android:id="@+id/de_stateM"
-                android:layout_width="100dp"
+                android:layout_width="230dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
-                android:maxLines="1"
                 android:ellipsize="end"
+                android:maxLines="1"
                 android:text="채널 십오야 바지사장입니다!! 앞으로 잘부탁드립니다."
                 android:textColor="#1F1F1F"
                 android:textSize="21dp"
@@ -155,10 +155,13 @@
                 android:id="@+id/de_toggle_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="132dp"
-                android:text="더보기"
-                android:layout_marginTop="20dp"
+                android:layout_marginStart="228dp"
+                android:layout_marginTop="24dp"
+                android:background="@android:color/transparent"
                 android:src="@drawable/ic_link_24"
+                android:text="더보기"
+                android:textColor="@color/black"
+                android:textSize="15dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/de_bloglink_icon" />
 
@@ -173,6 +176,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/de_stateM" />
 
             <TextView
+                android:id="@+id/de_mbti"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
@@ -210,41 +214,47 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
                 android:text=" \@Owler"
                 android:textColor="#687684"
                 android:textSize="16sp"
-                tools:layout_editor_absoluteX="135dp"
-                tools:layout_editor_absoluteY="435dp" />
+                app:layout_constraintBottom_toBottomOf="@+id/de_twitId_1"
+                app:layout_constraintStart_toEndOf="@+id/de_twitId_1"
+                app:layout_constraintTop_toTopOf="@+id/de_twitId_1" />
 
             <TextView
                 android:id="@+id/de_twitText_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="#ootd #오늘하루 #폭염주의보"
-                android:textColor="#87CEEB"
 
-                tools:layout_editor_absoluteX="82dp"
-                tools:layout_editor_absoluteY="457dp" />
+                android:textColor="#87CEEB"
+                app:layout_constraintStart_toStartOf="@+id/de_twitId_1"
+                app:layout_constraintTop_toBottomOf="@+id/de_twitId_1" />
 
             <TextView
                 android:id="@+id/de_twitId_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+
+                android:layout_marginTop="28dp"
                 android:text="이호식"
                 android:textSize="19dp"
                 android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/de_twitPhoto_1"
+                app:layout_constraintTop_toBottomOf="@+id/de_guideline1" />
 
-                tools:layout_editor_absoluteX="82dp"
-                tools:layout_editor_absoluteY="429dp" />
-
-            <ImageView
-                android:id="@+id/de_twitImage_1"
+            <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                android:id="@+id/youtube_player_view"
                 android:layout_width="306dp"
                 android:layout_height="209dp"
 
-                android:src="@drawable/ic_play_button"
-                tools:layout_editor_absoluteX="84dp"
-                tools:layout_editor_absoluteY="489dp" />
+                app:autoPlay="false"
+                app:layout_constraintStart_toEndOf="@+id/de_twitPhoto_1"
+                app:layout_constraintStart_toStartOf="@+id/de_data"
+                app:layout_constraintTop_toBottomOf="@+id/de_twitText_1"
+                app:videoId="TEOJ_Us2dZg" />
 
             <TextView
                 android:id="@+id/de_data"
@@ -261,11 +271,11 @@
                 android:id="@+id/de_twitImage_2"
                 android:layout_width="306dp"
                 android:layout_height="209dp"
+
+
                 android:src="@drawable/ic_play_button"
-
-
-                tools:layout_editor_absoluteX="86dp"
-                tools:layout_editor_absoluteY="727dp" />
+                app:layout_constraintStart_toStartOf="@+id/de_data"
+                app:layout_constraintTop_toBottomOf="@+id/de_data" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -285,6 +295,8 @@
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:layout_marginBottom="20dp"
+            android:contentDescription="메인화면으로 이동"
+            android:onClick="moveHome"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
@@ -306,6 +318,8 @@
             android:layout_height="40dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="20dp"
+            android:contentDescription="마이페이지화면으로이동"
+            android:onClick="moveMypage"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:srcCompat="@drawable/ic_portrait_24" />
@@ -326,6 +340,8 @@
             android:layout_height="40dp"
             android:layout_marginStart="20dp"
             android:layout_marginBottom="20dp"
+            android:contentDescription="유저리스트화면으로 이동"
+            android:onClick="moveUserList"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:srcCompat="@drawable/ic_people_alt_24" />
