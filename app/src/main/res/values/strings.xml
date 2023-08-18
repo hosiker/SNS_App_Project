@@ -46,6 +46,7 @@
     <string name="welcome">%1$s님 반갑습니다</string>
     <string name="Not_exist">존재하지 않는 계정입니다. \n입력하신 내용을 다시 확인해주세요.</string>
     <string name="enter_id_pwd">아이디/비밀번호를 입력해주세요.</string>
+    <string name="signup_psw">비밀번호</string>
 
 
     <!-- 메인 화면

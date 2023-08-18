@@ -2,6 +2,7 @@ package com.example.nbcamp_15ya_sns
 
 import android.app.AlertDialog
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -43,9 +44,11 @@ class SiginUpActivity : AppCompatActivity() {
                 val text: TextView = findViewById(R.id.mbti_check_text)
                 if (!isMBTI(s.toString())) {
                     text.text = getString(R.string.wrong_mbti)
+                    text.setTextColor(Color.RED)
                     mbtiCheck = false
                 } else {
                     text.text = getString(R.string.correct_mbti)
+                    text.setTextColor(Color.BLUE)
                     mbtiCheck = true
                 }
 
@@ -68,11 +71,13 @@ class SiginUpActivity : AppCompatActivity() {
                 when {
                     password.length < 8 || password.length > 15 -> {
                         text.text = getString(R.string.signin_pwd_condition)
+                        text.setTextColor(Color.RED)
                         pswCheck = false
                     }
 
                     else ->{
                         text.text = getString(R.string.correct_pwd)
+                        text.setTextColor(Color.BLUE)
                         pswCheck = true
                     }
 

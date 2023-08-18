@@ -50,17 +50,19 @@
                     android:layout_marginTop="20dp"
                     android:hint="@string/signin_id_hint"
                     android:maxLines="1"
-                    android:textSize="18dp"
+                    android:textSize="16dp"
                     android:textStyle="normal" />
 
-                <Button
+                <TextView
                     android:id="@+id/dublecheck_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
                     android:layout_marginTop="18dp"
+                    android:clickable="true"
                     android:onClick="doubleCheckOnClick"
-                    android:text="@string/signin_check" />
+                    android:text="@string/signin_check"
+                    android:textSize="25dp" />
 
 
             </LinearLayout>
@@ -78,7 +80,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="20dp"
-                    android:text="@string/login_pwd"
+                    android:text="@string/signup_psw"
                     android:textSize="15dp"
                     android:textStyle="bold" />
 
@@ -91,7 +93,7 @@
                     android:hint="@string/signin_pwd_hint"
                     android:inputType="textPassword"
                     android:maxLines="1"
-                    android:textSize="18dp"
+                    android:textSize="16dp"
                     android:textStyle="normal" />
 
             </LinearLayout>
@@ -135,7 +137,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="20dp"
                     android:hint="@string/signin_name_hint"
-                    android:textSize="18dp"
+                    android:textSize="16dp"
                     android:textStyle="normal" />
             </LinearLayout>
 
@@ -167,7 +169,7 @@
                     android:inputType="textCapCharacters"
                     android:maxLength="4"
                     android:maxLines="1"
-                    android:textSize="18dp"
+                    android:textSize="16dp"
                     android:textStyle="normal" />
             </LinearLayout>
 
@@ -207,7 +209,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="20dp"
                     android:hint="@string/signin_stateM_hint"
-                    android:textSize="18dp"
+                    android:textSize="16dp"
                     android:textStyle="normal" />
             </LinearLayout>
 
@@ -225,11 +227,13 @@
         </LinearLayout>
     </ScrollView>
 
-    <Button
+    <ImageView
         android:id="@+id/cancel_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="23dp"
+        android:layout_height="22dp"
+        android:clickable="true"
         android:onClick="finishOnClick"
+        android:src="@drawable/ic_back_arrow"
         android:text="@string/signin_back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
