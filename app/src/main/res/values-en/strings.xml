@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NBcamp_15ya_SNS</string>
+    <string name="login_welcome">Nice to see you again!</string>
+    <string name="login_id">ID</string>
+    <string name="login_id_hint">Enter Id please</string>
+    <string name="login_pwd">Password</string>
+    <string name="login_pwd_hint">Enter pwd please</string>
+    <string name="login_login">login</string>
+    <string name="login_account">no account?</string>
+    <string name="login_sign_up">register</string>
+</resources>
