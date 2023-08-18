@@ -32,15 +32,15 @@ class LoginActivity : AppCompatActivity() {
 
                     UserManager.user = user
 
-                    Toast.makeText(this,"${user.name}님 반갑습니다", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, getString(R.string.welcome, user.name), Toast.LENGTH_SHORT).show()
                     startActivity(intent)
                     overridePendingTransition(R.anim.fade_in, 0)
 
                 } else {
-                    Toast.makeText(this, "존재하지 않는 계정입니다. \n입력하신 내용을 다시 확인해주세요.", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, getString(R.string.Not_exist), Toast.LENGTH_SHORT).show()
                 }
             } else {
-                Toast.makeText(this, "아이디/비밀번호를 입력해주세요.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.enter_id_pwd), Toast.LENGTH_SHORT).show()
             }
         }
 

@@ -30,11 +30,11 @@ class DetailActivity : AppCompatActivity() {
             if (isExpanded) {
                 contentTextView.maxLines = 1
                 contentTextView.ellipsize = TextUtils.TruncateAt.END
-                toggleButton.text = "더보기"
+                toggleButton.text = getString(R.string.de_more)
             } else {
                 contentTextView.maxLines = Int.MAX_VALUE
                 contentTextView.ellipsize = null
-                toggleButton.text = "접기"
+                toggleButton.text = getString(R.string.de_shorts)
             }
             isExpanded = !isExpanded
         }
