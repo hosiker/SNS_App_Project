@@ -212,10 +212,11 @@
                 app:layout_constraintTop_toTopOf="@+id/de_guideline1" />
 
             <TextView
+                android:id="@+id/de_twitId_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text=" \@Owler"
+                android:text=" \@Ohappy"
                 android:textColor="#687684"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/de_twitId_1"
@@ -292,9 +293,10 @@
 
         <ImageView
             android:id="@+id/de_imageView4"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:layout_marginBottom="20dp"
+            android:clickable="true"
             android:contentDescription="메인화면으로 이동"
             android:onClick="moveHome"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -314,10 +316,11 @@
 
         <ImageView
             android:id="@+id/de_imageView5"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="20dp"
+            android:clickable="true"
             android:contentDescription="마이페이지화면으로이동"
             android:onClick="moveMypage"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -336,10 +339,11 @@
 
         <ImageView
             android:id="@+id/de_imageView3"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:layout_marginStart="20dp"
             android:layout_marginBottom="20dp"
+            android:clickable="true"
             android:contentDescription="유저리스트화면으로 이동"
             android:onClick="moveUserList"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -356,14 +360,6 @@
             app:layout_constraintStart_toStartOf="@+id/de_imageView5" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text=""
-
-
-        app:layout_constraintTop_toBottomOf="@+id/de_scrollView"
-        tools:layout_editor_absoluteX="0dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
