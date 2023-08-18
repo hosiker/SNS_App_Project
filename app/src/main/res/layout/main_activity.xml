@@ -39,13 +39,21 @@
 
             <!--  사용자 정보-->
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/myConstraintLayout"
+                android:id="@+id/main_myConstraintLayout"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="wrap_content"
                 android:onClick="toMyPage"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
+
+                <View
+                    android:id="@+id/main_myConstraintLayout_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerInParent="true"
+                    android:background="#C5C5C5"
+                    app:layout_constraintTop_toTopOf="@id/main_myConstraintLayout" />
 
                 <FrameLayout
                     android:layout_width="74dp"
@@ -65,6 +73,7 @@
                     app:civ_border_color="@color/design_default_color_background"
                     app:civ_border_overlay="true"
                     app:civ_border_width="5dp"
+                    android:layout_marginVertical="5dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -95,15 +104,15 @@
 
             <!--  게시물  -->
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/main_constraintLayout3"
+                android:id="@+id/main_twit1_constraintLayout"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="0dp"
                 android:clickable="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/myConstraintLayout">
+                app:layout_constraintTop_toBottomOf="@+id/main_myConstraintLayout">
 
 
                 <View
@@ -114,7 +123,6 @@
                     android:background="#C5C5C5"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <!-- 트윗1  -->
 
                 <FrameLayout
                     android:layout_width="55dp"
@@ -165,16 +173,18 @@
 
                 <TextView
                     android:id="@+id/main_twit1"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:ellipsize="end"
-                    android:text="아 역시 유해진님 나오니까 너무 편하고 웃기고 \n유쾌함..ㅋㅋㅋㅋㅋㅋㅋ
+                    android:text="아 역시 유해진님 나오니까 너무 편하고 웃기고 유쾌함..ㅋㅋㅋㅋㅋㅋㅋ
                     \n#채널십오야 #나불나불 #유해진"
+                    app:layout_constraintEnd_toEndOf="@+id/main_twit1_youtube"
                     app:layout_constraintStart_toEndOf="@+id/main_twit1_userphoto"
                     app:layout_constraintTop_toBottomOf="@+id/main_twit1_name" />
 
                 <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                    android:id="@+id/main_twit1_youtube"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="83dp"
@@ -199,231 +209,398 @@
                     app:layout_constraintBottom_toBottomOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-            <!--   게시물 2  -->
+            <!--  게시물2  -->
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout4"
+                android:id="@+id/main_twit2_constraintLayout"
                 android:layout_width="0dp"
-                android:layout_height="90dp"
+                android:layout_height="wrap_content"
+
+                android:clickable="true"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/main_constraintLayout3">
+                app:layout_constraintTop_toBottomOf="@+id/main_twit1_constraintLayout">
+
 
                 <FrameLayout
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
                     android:foreground="@drawable/rainbow"
-                    app:layout_constraintStart_toStartOf="@id/imageView8"
-                    app:layout_constraintTop_toTopOf="@id/imageView8"
+                    app:layout_constraintStart_toStartOf="@id/main_twit2_userphoto"
+                    app:layout_constraintTop_toTopOf="@id/main_twit2_userphoto"
                     tools:ignore="NotSibling" />
 
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/imageView8"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="10dp"
-                    android:padding="2dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/newjeans"
-                    app:civ_border_color="#F1F1F1"
-                    app:civ_border_overlay="false"
-                    app:civ_border_width="2dp"
-                    app:layout_constraintEnd_toStartOf="@+id/textView3"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="327dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:ellipsize="end"
-                    android:maxLines="4"
-                    android:text="NewJeans \nComing Soon!\nNewJeans 2nd EP 'Get Up'\n
-🗓 2023.7.7. Pre-Release\n🗓 2023.7.21. 2nd EP 'Get Up' Release
-✅ Pre-Order\n
-2023.6.19. 11AM KST\n
-#Time_to_NewJeans\n
-#NewJeans #뉴진스 #NewJeans_2nd_EP"
-                    app:layout_constraintStart_toEndOf="@+id/imageView8"
-                    app:layout_constraintTop_toTopOf="@+id/imageView8" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_centerInParent="true"
-                    android:background="#C5C5C5"
-                    app:layout_constraintBottom_toBottomOf="parent" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <!--   게시물 3  -->
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout5"
-                android:layout_width="0dp"
-                android:layout_height="90dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
-
-                <FrameLayout
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:foreground="@drawable/rainbow"
-                    app:layout_constraintStart_toStartOf="@id/imageView9"
-                    app:layout_constraintTop_toTopOf="@id/imageView9"
-                    tools:ignore="NotSibling" />
 
                 <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/imageView9"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="10dp"
+                    android:id="@+id/main_twit2_userphoto"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="12dp"
                     android:padding="2dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/newjeans"
                     app:civ_border_color="@color/design_default_color_background"
                     app:civ_border_overlay="false"
                     app:civ_border_width="2dp"
-                    app:layout_constraintEnd_toStartOf="@+id/textView4"
+                    app:layout_constraintEnd_toStartOf="@+id/main_twit2"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="327dp"
+                    android:id="@+id/main_twit2_name"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="12dp"
+                    android:text="Name"
+                    android:textSize="19dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/main_twit2_userphoto"
+                    app:layout_constraintTop_toTopOf="@+id/main_twit2_constraintLayout"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" \@Id"
+                    android:textSize="16sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/main_twit2_name"
+                    app:layout_constraintStart_toEndOf="@+id/main_twit2_name" />
+
+                <TextView
+                    android:id="@+id/main_twit2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
                     android:ellipsize="end"
-                    android:maxLines="4"
-                    android:text="NewJeans \nComing Soon!\nNewJeans 2nd EP 'Get Up'\n
-🗓 2023.7.7. Pre-Release\n🗓 2023.7.21. 2nd EP 'Get Up' Release
-✅ Pre-Order\n
-2023.6.19. 11AM KST\n
-#Time_to_NewJeans\n
-#NewJeans #뉴진스 #NewJeans_2nd_EP"
-                    app:layout_constraintStart_toEndOf="@+id/imageView9"
-                    app:layout_constraintTop_toTopOf="@+id/imageView9" />
+                    android:text="꿀피부 그가 멈추면... 방송국이 멈춘다...★
+                    "
+                    app:layout_constraintEnd_toEndOf="@+id/main_twit2_youtube"
+                    app:layout_constraintStart_toEndOf="@+id/main_twit2_userphoto"
+                    app:layout_constraintTop_toBottomOf="@+id/main_twit2_name" />
+
+                <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                    android:id="@+id/main_twit2_youtube"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="83dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="12dp"
+
+                    app:autoPlay="false"
+                    app:layout_constraintBottom_toTopOf="@+id/main_twit2_line"
+                    app:layout_constraintTop_toBottomOf="@+id/main_twit2"
+                    app:videoId="BCxdMEp5auY"
+
+                    />
+
 
                 <View
+                    android:id="@+id/main_twit2_line"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_centerInParent="true"
                     android:background="#C5C5C5"
                     app:layout_constraintBottom_toBottomOf="parent" />
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <!--   게시물 4  -->
+            <!--  게시물3  -->
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout6"
+                android:id="@+id/main_twit3_constraintLayout"
                 android:layout_width="0dp"
-                android:layout_height="90dp"
+                android:layout_height="wrap_content"
+
+                android:clickable="true"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/constraintLayout5">
+                app:layout_constraintTop_toBottomOf="@+id/main_twit2_constraintLayout">
+
 
                 <FrameLayout
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
                     android:foreground="@drawable/rainbow"
-                    app:layout_constraintStart_toStartOf="@id/imageView10"
-                    app:layout_constraintTop_toTopOf="@id/imageView10"
+                    app:layout_constraintStart_toStartOf="@id/main_twit3_userphoto"
+                    app:layout_constraintTop_toTopOf="@id/main_twit3_userphoto"
                     tools:ignore="NotSibling" />
 
+
                 <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/imageView10"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="10dp"
+                    android:id="@+id/main_twit3_userphoto"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="12dp"
                     android:padding="2dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/newjeans"
                     app:civ_border_color="@color/design_default_color_background"
                     app:civ_border_overlay="false"
                     app:civ_border_width="2dp"
-                    app:layout_constraintEnd_toStartOf="@+id/textView5"
+                    app:layout_constraintEnd_toStartOf="@+id/main_twit3"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="327dp"
+                    android:id="@+id/main_twit3_name"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="12dp"
+                    android:text="Name"
+                    android:textSize="19dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/main_twit3_userphoto"
+                    app:layout_constraintTop_toTopOf="@+id/main_twit3_constraintLayout"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" \@Id"
+                    android:textSize="16sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/main_twit3_name"
+                    app:layout_constraintStart_toEndOf="@+id/main_twit3_name" />
+
+                <TextView
+                    android:id="@+id/main_twit3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
                     android:ellipsize="end"
-                    android:maxLines="4"
-                    android:text="NewJeans \nComing Soon!\nNewJeans 2nd EP 'Get Up'\n
-🗓 2023.7.7. Pre-Release\n🗓 2023.7.21. 2nd EP 'Get Up' Release
-✅ Pre-Order\n
-2023.6.19. 11AM KST\n
-#Time_to_NewJeans\n
-#NewJeans #뉴진스 #NewJeans_2nd_EP"
-                    app:layout_constraintStart_toEndOf="@+id/imageView10"
-                    app:layout_constraintTop_toTopOf="@+id/imageView10" />
+
+                    android:text="코너 진짜 잘짠다 ㅋㅋㅋㅋㅋㅋㅋㅋㅋ 진짜 누가 유튜브 하자고 한거야 너무 찰떡임 ㅋㅋㅋㅋㅋ 이젠 영석이형 토크하는거 보려고 옴
+                    \n#채널십오야 #보은의신 #박서준"
+                    app:layout_constraintEnd_toEndOf="@+id/main_twit3_youtube"
+                    app:layout_constraintStart_toEndOf="@+id/main_twit3_userphoto"
+                    app:layout_constraintTop_toBottomOf="@+id/main_twit3_name" />
+
+                <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                    android:id="@+id/main_twit3_youtube"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="83dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="12dp"
+
+                    app:autoPlay="false"
+                    app:layout_constraintBottom_toTopOf="@+id/main_twit3_line"
+                    app:layout_constraintTop_toBottomOf="@+id/main_twit3"
+                    app:videoId="uUFviUVKJLo"
+
+                    />
+
 
                 <View
+                    android:id="@+id/main_twit3_line"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_centerInParent="true"
                     android:background="#C5C5C5"
                     app:layout_constraintBottom_toBottomOf="parent" />
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-            <!--   게시물 5  -->
+            <!--  게시물4  -->
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout7"
+                android:id="@+id/main_twit4_constraintLayout"
                 android:layout_width="0dp"
-                android:layout_height="90dp"
+                android:layout_height="wrap_content"
+
+                android:clickable="true"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/constraintLayout6">
+                app:layout_constraintTop_toBottomOf="@+id/main_twit3_constraintLayout">
+
 
                 <FrameLayout
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
                     android:foreground="@drawable/rainbow"
-                    app:layout_constraintStart_toStartOf="@id/imageView11"
-                    app:layout_constraintTop_toTopOf="@id/imageView11"
+                    app:layout_constraintStart_toStartOf="@id/main_twit4_userphoto"
+                    app:layout_constraintTop_toTopOf="@id/main_twit4_userphoto"
                     tools:ignore="NotSibling" />
 
+
                 <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/imageView11"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="10dp"
+                    android:id="@+id/main_twit4_userphoto"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="12dp"
                     android:padding="2dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/newjeans"
                     app:civ_border_color="@color/design_default_color_background"
                     app:civ_border_overlay="false"
                     app:civ_border_width="2dp"
-                    app:layout_constraintEnd_toStartOf="@+id/textView6"
+                    app:layout_constraintEnd_toStartOf="@+id/main_twit4"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView6"
-                    android:layout_width="327dp"
+                    android:id="@+id/main_twit4_name"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:ellipsize="end"
-                    android:maxLines="4"
-                    android:text="NewJeans \nComing Soon!\nNewJeans 2nd EP 'Get Up'\n
-🗓 2023.7.7. Pre-Release\n🗓 2023.7.21. 2nd EP 'Get Up' Release
-✅ Pre-Order\n
-2023.6.19. 11AM KST\n
-#Time_to_NewJeans\n
-#NewJeans #뉴진스 #NewJeans_2nd_EP"
-                    app:layout_constraintStart_toEndOf="@+id/imageView11"
-                    app:layout_constraintTop_toTopOf="@+id/imageView11" />
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="12dp"
+                    android:text="Name"
+                    android:textSize="19dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/main_twit4_userphoto"
+                    app:layout_constraintTop_toTopOf="@+id/main_twit4_constraintLayout"
 
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" \@Id"
+                    android:textSize="16sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/main_twit4_name"
+                    app:layout_constraintStart_toEndOf="@+id/main_twit4_name" />
+
+                <TextView
+                    android:id="@+id/main_twit4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:ellipsize="end"
+
+                    android:text="밀수.... 넘 재밌어요... 염정아 배우 연기 미쳤어요...우시면서 배에 앉아서 노래하실때 연극같기도 하고, 감정연기 미쳐버린것..."
+                    app:layout_constraintEnd_toEndOf="@+id/main_twit4_youtube"
+                    app:layout_constraintStart_toEndOf="@+id/main_twit4_userphoto"
+                    app:layout_constraintTop_toBottomOf="@+id/main_twit4_name" />
+
+                <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                    android:id="@+id/main_twit4_youtube"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="83dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="12dp"
+
+                    app:autoPlay="false"
+                    app:layout_constraintBottom_toTopOf="@+id/main_twit4_line"
+                    app:layout_constraintTop_toBottomOf="@+id/main_twit4"
+                    app:videoId="YqKBJYDnOZU"
+
+                    />
+
+
+                <View
+                    android:id="@+id/main_twit4_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerInParent="true"
+                    android:background="#C5C5C5"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--  게시물5  -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/main_twit5_constraintLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:clickable="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/main_twit4_constraintLayout">
+
+
+                <FrameLayout
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:foreground="@drawable/rainbow"
+                    app:layout_constraintStart_toStartOf="@id/main_twit5_userphoto"
+                    app:layout_constraintTop_toTopOf="@id/main_twit5_userphoto"
+                    tools:ignore="NotSibling" />
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/main_twit5_userphoto"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="12dp"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/newjeans"
+                    app:civ_border_color="@color/design_default_color_background"
+                    app:civ_border_overlay="false"
+                    app:civ_border_width="2dp"
+                    app:layout_constraintEnd_toStartOf="@+id/main_twit5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/main_twit5_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="12dp"
+                    android:text="Name"
+                    android:textSize="19dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/main_twit5_userphoto"
+                    app:layout_constraintTop_toTopOf="@+id/main_twit5_constraintLayout"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" \@Id"
+                    android:textSize="16sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/main_twit5_name"
+                    app:layout_constraintStart_toEndOf="@+id/main_twit5_name" />
+
+                <TextView
+                    android:id="@+id/main_twit5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:ellipsize="end"
+
+                    android:text="승워니형 겁나 웃기네 ㅋㅋㅋㅋ 역시 해진형도 그렇고 둘 다 지식도 그렇고 삶의 지혜도 넘쳐나는 걸 보면 둘이 찐친임 ㅋㅋ
+해진이형 한 프로들 보면 여행하면서도 동생들에게 직접적으로 다 가르쳐주고~~ 이번엔 해진이형 불러줘요 영석이형~~"
+                    app:layout_constraintEnd_toEndOf="@+id/main_twit5_youtube"
+                    app:layout_constraintStart_toEndOf="@+id/main_twit5_userphoto"
+                    app:layout_constraintTop_toBottomOf="@+id/main_twit5_name" />
+
+                <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                    android:id="@+id/main_twit5_youtube"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="83dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="12dp"
+
+                    app:autoPlay="false"
+                    app:layout_constraintBottom_toTopOf="@+id/main_twit5_line"
+                    app:layout_constraintTop_toBottomOf="@+id/main_twit5"
+                    app:videoId="tSG-2Kx4IaQ"
+
+                    />
+
+
+                <View
+                    android:id="@+id/main_twit5_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerInParent="true"
+                    android:background="#C5C5C5"
+                    app:layout_constraintBottom_toBottomOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 

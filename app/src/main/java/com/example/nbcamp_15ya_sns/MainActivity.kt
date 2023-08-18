@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         // 3. 첫번째 더미 게시글 클릭시 화면 전환
-        val constraintLayout3 = findViewById<ConstraintLayout>(R.id.main_constraintLayout3)
+        val constraintLayout3 = findViewById<ConstraintLayout>(R.id.main_twit1_constraintLayout)
         constraintLayout3.setOnClickListener {
             val intent = Intent(this, DetailActivity::class.java)
             startActivity(intent)
