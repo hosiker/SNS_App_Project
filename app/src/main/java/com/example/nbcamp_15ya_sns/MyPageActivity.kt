@@ -26,7 +26,7 @@ class MyPageActivity : AppCompatActivity() {
 
 
         nameText.text = "${userME?.name}"
-        id.text = "$@Id ${userME?.id}"
+        id.text = "@Id ${userME?.id}"
         stateM.text = "${userME?.stateM}"
         mbtiText.text = "MBTI는 ${userME?.mbti}입니다!!"
 

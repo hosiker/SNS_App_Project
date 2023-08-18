@@ -506,8 +506,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/friend_constraintLayout_list"
-            android:layout_width="83dp"
-            android:layout_height="56dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:clickable="true"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -516,8 +516,8 @@
 
             <ImageView
                 android:id="@+id/friend_list"
-                android:layout_width="29dp"
-                android:layout_height="32dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginBottom="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -551,7 +551,7 @@
 
             <ImageView
                 android:id="@+id/iv_main_list"
-                android:layout_width="27dp"
+                android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginBottom="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -564,7 +564,7 @@
             <TextView
                 android:id="@+id/de_main_list"
                 android:layout_width="wrap_content"
-                android:layout_height="21dp"
+                android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="@string/nav_home"
                 app:layout_constraintBottom_toBottomOf="parent"
