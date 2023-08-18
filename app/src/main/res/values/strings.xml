@@ -1,5 +1,18 @@
 <resources>
     <string name="app_name">NBcamp_15ya_SNS</string>
-    
 
+    <!-- 로그인 화면-->
+    <string name="login_welcome">다시 만나서 반가워요!</string>
+    <string name="login_id">아이디</string>
+    <string name="login_id_hint">아이디를 입력해 주세요.</string>
+    <string name="login_pwd">비밀번호</string>
+    <string name="login_pwd_hint">비밀번호를 입력해주세요.</string>
+    <string name="login_login">로그인</string>
+    <string name="login_account">계정이 없으신가요?</string>
+    <string name="login_sign_up">가입하기</string>
+    <!-- 메인 화면
+            .
+            .
+            .
+     -->
 </resources>
