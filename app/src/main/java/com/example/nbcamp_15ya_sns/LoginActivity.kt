@@ -34,6 +34,7 @@ class LoginActivity : AppCompatActivity() {
 
                     Toast.makeText(this,"${user.name}님 반갑습니다", Toast.LENGTH_SHORT).show()
                     startActivity(intent)
+                    overridePendingTransition(R.anim.fade_in, 0)
 
                 } else {
                     Toast.makeText(this, "존재하지 않는 계정입니다. \n입력하신 내용을 다시 확인해주세요.", Toast.LENGTH_SHORT).show()

@@ -17,6 +17,7 @@ class StartActivity : AppCompatActivity() {
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
             startActivity(intent)
             finish()
+
         },2000)
 
     }
