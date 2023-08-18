@@ -85,7 +85,7 @@ class SiginUpActivity : AppCompatActivity() {
     fun doubleCheckOnClick(view: View) {
 
         val inputid = id.text.toString()
-        if (userManager.userList.find { it.id == inputid } != null
+        if (UserDB.userList.find { it.id == inputid } != null
             || inputid.isEmpty()) {
 
             toast("불가능한 아이디입니다.")
@@ -114,7 +114,7 @@ class SiginUpActivity : AppCompatActivity() {
             -> checkMessage(inputPsw = inputpsw, inputName = inputname, inputMBTI = inputmbti)
 
             else -> {
-                userManager.userList.add(
+                UserDB.userList.add(
                     User(
                         id = inputId,
                         password = inputpsw,

@@ -18,11 +18,11 @@ class UserListActivity : AppCompatActivity() {
         val friendListJisung = findViewById<ConstraintLayout>(R.id.friend_list4)
         val friendListJaeyong = findViewById<ConstraintLayout>(R.id.friend_list5)
 
-        toss(view = friendListHosick, friend = "hosick", friendInfo = friendManager.friendList[0],"img1",R.drawable.hosick)
-        toss(view = friendListGyujin, friend = "gyujin", friendInfo = friendManager.friendList[1],"img2",R.drawable.gyujin)
-        toss(view = friendListSeungyoon, friend = "seingyoon", friendInfo = friendManager.friendList[2],"img3",R.drawable.seungyoon)
-        toss(view = friendListJisung, friend = "jisung", friendInfo = friendManager.friendList[3],"img4",R.drawable.jisung)
-        toss(view = friendListJaeyong, friend = "jaeyoung", friendInfo = friendManager.friendList[4],"img5",R.drawable.jaeyong)
+        toss(view = friendListHosick, friend = "hosick", friendInfo = FriendDB.friendList[0],"img1",R.drawable.hosick)
+        toss(view = friendListGyujin, friend = "gyujin", friendInfo = FriendDB.friendList[1],"img2",R.drawable.gyujin)
+        toss(view = friendListSeungyoon, friend = "seingyoon", friendInfo = FriendDB.friendList[2],"img3",R.drawable.seungyoon)
+        toss(view = friendListJisung, friend = "jisung", friendInfo = FriendDB.friendList[3],"img4",R.drawable.jisung)
+        toss(view = friendListJaeyong, friend = "jaeyoung", friendInfo = FriendDB.friendList[4],"img5",R.drawable.jaeyong)
 
         val homeBtn = findViewById<ConstraintLayout>(R.id.home_btn_list)
         val backBtn = findViewById<ImageView>(R.id.userlist_backButton)
