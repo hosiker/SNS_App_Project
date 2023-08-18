@@ -316,7 +316,7 @@
                 android:id="@+id/tv_friend_my"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="친구"
+                android:text="@string/nav_friend"
                 app:layout_constraintEnd_toEndOf="@+id/friend_my"
                 app:layout_constraintStart_toStartOf="@+id/friend_my"
                 app:layout_constraintTop_toBottomOf="@+id/friend_my" />
@@ -350,7 +350,7 @@
                 android:id="@+id/de_main_my"
                 android:layout_width="15dp"
                 android:layout_height="21dp"
-                android:text="홈"
+                android:text="@string/nav_home"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/iv_main_my"
                 app:layout_constraintHorizontal_bias="0.531"
@@ -383,7 +383,7 @@
                 android:id="@+id/de_myPage_my"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="마이페이지"
+                android:text="@string/nav_mypage"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/iv_mypage_my"
                 app:layout_constraintStart_toStartOf="@+id/iv_mypage_my" />

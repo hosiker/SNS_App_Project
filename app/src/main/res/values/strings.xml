@@ -10,6 +10,44 @@
     <string name="login_login">로그인</string>
     <string name="login_account">계정이 없으신가요?</string>
     <string name="login_sign_up">가입하기</string>
+    <string name="nav_friend">친구</string>
+    <string name="nav_home">홈</string>
+    <string name="nav_mypage">마이페이지</string>
+    <string name="friend_List">친구목록</string>
+    <string name="de_more">더보기</string>
+    <string name="de_shorts">접기</string>
+    <string name="signin_back">뒤로가기</string>
+    <string name="signin_check">확인</string>
+    <string name="signin_id_hint">아이디를 입력해주세요.</string>
+    <string name="signin_pwd_hint">비밀번호를 입력해주세요.</string>
+    <string name="signin_pwd_condition">비밀번호는 8자리 이상 15자리로 구성해주세요</string>
+    <string name="signin_name">이름</string>
+    <string name="signin_name_hint">이름을 입력해주세요.</string>
+    <string name="signin_mbti">MBTI</string>
+    <string name="signin_mbti_hint">MBTI를 입력해주세요.</string>
+    <string name="signin_stateM">소개글</string>
+    <string name="signin_stateM_hint">소개글을 입력해주세요.</string>
+    <string name="signin_signin">회원가입</string>
+    <string name="wrong_mbti">잘못된 MBTI입니다.</string>
+    <string name="correct_mbti">올바른 MBTI입니다.</string>
+    <string name="correct_pwd">올바른 비밀번호입니다.</string>
+    <string name="impassble_id">불가능한 아이디입니다.</string>
+    <string name="possible_id">사용 가능한 아이디입니다.</string>
+    <string name="please_double_check">아이디 중복 체크를 해주세요!!</string>
+    <string name="please_double_check_pwd">사용 가능한 비밀번호를 만들어주세요!!</string>
+    <string name="blank_check">소개글을 제외한 공백을 확인해주세요</string>
+    <string name="pwd_id_check">비밀번호와 이름을 입력해주세요</string>
+    <string name="pwd_mbti_check">비밀번호와 mbti를 입력해주세요</string>
+    <string name="mbti_name_check">mbti와 이름을 입력해주세요</string>
+    <string name="pwd_check">비밀번호를 확인해주세요</string>
+    <string name="check">확인</string>
+    <string name="cancle">취소</string>
+    <string name="do_title">%1$s을 입력해주세요</string>
+    <string name="welcome">%1$s님 반갑습니다</string>
+    <string name="Not_exist">존재하지 않는 계정입니다. \n입력하신 내용을 다시 확인해주세요.</string>
+    <string name="enter_id_pwd">아이디/비밀번호를 입력해주세요.</string>
+
+
     <!-- 메인 화면
             .
             .
