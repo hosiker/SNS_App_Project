@@ -103,6 +103,11 @@ class DetailActivity : AppCompatActivity() {
         val moveHome = findViewById<ImageView>(R.id.de_imageView4)
         val moveUserList = findViewById<ImageView>(R.id.de_imageView3)
         val moveMypage = findViewById<ImageView>(R.id.de_imageView5)
+        val backBtn = findViewById<ImageView>(R.id.de_backbutton)
+
+        backBtn.setOnClickListener{
+            finish()
+        }
 
         moveHome.setOnClickListener {
             val moverHome = Intent(this, MainActivity::class.java)

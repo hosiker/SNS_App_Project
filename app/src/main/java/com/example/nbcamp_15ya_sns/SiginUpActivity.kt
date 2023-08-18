@@ -75,7 +75,7 @@ class SiginUpActivity : AppCompatActivity() {
                         pswCheck = false
                     }
 
-                    else ->{
+                    else -> {
                         text.text = getString(R.string.correct_pwd)
                         text.setTextColor(Color.BLUE)
                         pswCheck = true
@@ -110,6 +110,8 @@ class SiginUpActivity : AppCompatActivity() {
         val inputmbti = mbti.text.toString()
         val inputstateM = stateM.text.toString()
 
+        val intent = Intent(this, LoginActivity::class.java)
+
         when {
             idCheck == false -> toast(getString(R.string.please_double_check))
 
@@ -119,17 +121,32 @@ class SiginUpActivity : AppCompatActivity() {
             -> checkMessage(inputPsw = inputpsw, inputName = inputname, inputMBTI = inputmbti)
 
             else -> {
-                UserDB.userList.add(
-                    User(
-                        id = inputId,
-                        password = inputpsw,
-                        name = inputname,
-                        mbti = inputmbti,
-                        stateM = inputstateM
+
+                if (inputstateM.isNotEmpty()) {
+                    UserDB.userList.add(
+                        User(
+                            id = inputId,
+                            password = inputpsw,
+                            name = inputname,
+                            mbti = inputmbti,
+                            stateM = inputstateM
+                        )
                     )
-                )
-                val intent = Intent(this, LoginActivity::class.java)
-                startActivity(intent)
+
+                    startActivity(intent)
+                } else {
+                    UserDB.userList.add(
+                        User(
+                            id = inputId,
+                            password = inputpsw,
+                            name = inputname,
+                            mbti = inputmbti,
+                            stateM = "               "
+                        )
+                    )
+
+                    startActivity(intent)
+                }
             }
         }
 
@@ -147,7 +164,8 @@ class SiginUpActivity : AppCompatActivity() {
             checkEmpty(inputPsw) && checkEmpty(inputName) && checkEmpty(inputMBTI) -> toast(
                 getString(
                     R.string.blank_check
-                ))
+                )
+            )
 
             checkEmpty(inputPsw) && checkEmpty(inputName) -> toast(getString(R.string.pwd_id_check))
 
