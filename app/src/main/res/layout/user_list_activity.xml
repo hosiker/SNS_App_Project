@@ -506,8 +506,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/friend_constraintLayout_list"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="83dp"
+            android:layout_height="56dp"
             android:layout_marginTop="5dp"
             android:clickable="true"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -516,8 +516,8 @@
 
             <ImageView
                 android:id="@+id/friend_list"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="29dp"
+                android:layout_height="32dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginBottom="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -543,9 +543,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
 
             <ImageView
                 android:id="@+id/iv_main_list"
@@ -561,15 +563,14 @@
 
             <TextView
                 android:id="@+id/de_main_list"
-                android:layout_width="15dp"
+                android:layout_width="wrap_content"
                 android:layout_height="21dp"
+                android:gravity="center"
                 android:text="@string/nav_home"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/iv_main_list"
-                app:layout_constraintHorizontal_bias="0.531"
-                app:layout_constraintStart_toStartOf="@+id/iv_main_list" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/navi_my_list"
