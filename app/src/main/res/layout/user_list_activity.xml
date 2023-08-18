@@ -20,7 +20,6 @@
             android:layout_width="80dp"
             android:layout_height="73dp"
             android:layout_gravity="center"
-
             android:src="@drawable/ic_logo_15ya"></ImageView>
 
         <ImageView
@@ -28,9 +27,11 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/ic_back_arrow"
+            android:clickable="true"
 
-            />
+            android:src="@drawable/ic_back_arrow"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="21dp" />
     </com.google.android.material.appbar.MaterialToolbar>
 
     <TextView
@@ -118,7 +119,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="12dp"
-                        android:text="Name1"
+                        android:text="이호식"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -128,7 +129,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="5dp"
-                        android:text="\@ ID"
+                        android:text="\@ ID sy"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/userlist_user1_name" />
 
@@ -139,7 +140,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="12dp"
-                        android:text="상태메세지~~~~~~~~~~~~~~~"
+                        android:text="15조 바지사장입니다."
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/userlist_user1_id"
@@ -167,6 +168,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:clickable="true">
+
                     <FrameLayout
                         android:layout_width="70dp"
                         android:layout_height="70dp"
@@ -179,10 +181,10 @@
                         android:id="@+id/userlist_user2_photo"
                         android:layout_width="70dp"
                         android:layout_height="70dp"
-                        android:padding="2dp"
                         android:layout_marginTop="12dp"
                         android:layout_marginEnd="20dp"
                         android:layout_marginBottom="12dp"
+                        android:padding="2dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/gyujin"
                         app:civ_border_color="@color/design_default_color_background"
@@ -200,7 +202,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="12dp"
-                        android:text="Name2"
+                        android:text="송규진"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -210,7 +212,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="5dp"
-                        android:text="\@ ID"
+                        android:text="\@ ID gy"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/userlist_user2_name" />
 
@@ -221,7 +223,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="12dp"
-                        android:text="상태메세지~~~~~~~~~~~~~~~"
+                        android:text="말이 항상 많습니다. 참을 수 없어요."
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/userlist_user2_id"
@@ -248,6 +250,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:clickable="true">
+
                     <FrameLayout
                         android:layout_width="70dp"
                         android:layout_height="70dp"
@@ -255,14 +258,15 @@
                         app:layout_constraintStart_toStartOf="@id/userlist_user3_photo"
                         app:layout_constraintTop_toTopOf="@id/userlist_user3_photo"
                         tools:ignore="NotSibling" />
+
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/userlist_user3_photo"
                         android:layout_width="70dp"
                         android:layout_height="70dp"
-                        android:padding="2dp"
                         android:layout_marginTop="12dp"
                         android:layout_marginEnd="20dp"
                         android:layout_marginBottom="12dp"
+                        android:padding="2dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/seungyoon"
                         app:civ_border_color="@color/design_default_color_background"
@@ -280,7 +284,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="12dp"
-                        android:text="Name3"
+                        android:text="박승윤"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -290,7 +294,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="5dp"
-                        android:text="\@ ID"
+                        android:text="\@ ID so"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/userlist_user3_name" />
 
@@ -301,7 +305,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="12dp"
-                        android:text="상태메세지~~~~~~~~~~~~~~~"
+                        android:text="분노조절잘해"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/userlist_user3_id"
@@ -329,6 +333,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:clickable="true">
+
                     <FrameLayout
                         android:layout_width="70dp"
                         android:layout_height="70dp"
@@ -341,10 +346,10 @@
                         android:id="@+id/userlist_user4_photo"
                         android:layout_width="70dp"
                         android:layout_height="70dp"
-                        android:padding="2dp"
                         android:layout_marginTop="12dp"
                         android:layout_marginEnd="20dp"
                         android:layout_marginBottom="12dp"
+                        android:padding="2dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/jisung"
                         app:civ_border_color="@color/design_default_color_background"
@@ -362,7 +367,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="12dp"
-                        android:text="Name4"
+                        android:text="전지성"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -372,7 +377,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="5dp"
-                        android:text="\@ ID"
+                        android:text="\@ ID js"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/userlist_user4_name" />
 
@@ -383,7 +388,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="12dp"
-                        android:text="상태메세지~~~~~~~~~~~~~~~"
+                        android:text="INTJ 삼형제 입니다."
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/userlist_user4_id"
@@ -411,6 +416,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:clickable="true">
+
                     <FrameLayout
                         android:layout_width="70dp"
                         android:layout_height="70dp"
@@ -423,10 +429,10 @@
                         android:id="@+id/userlist_user5_photo"
                         android:layout_width="70dp"
                         android:layout_height="70dp"
-                        android:padding="2dp"
                         android:layout_marginTop="12dp"
                         android:layout_marginEnd="20dp"
                         android:layout_marginBottom="12dp"
+                        android:padding="2dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/jaeyong"
                         app:civ_border_color="@color/design_default_color_background"
@@ -444,7 +450,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="12dp"
-                        android:text="Name5"
+                        android:text="장재용"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -454,7 +460,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="5dp"
-                        android:text="\@ ID"
+                        android:text="\@ ID jo"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/userlist_user5_name" />
 
@@ -465,7 +471,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="12dp"
-                        android:text="상태메세지~~~~~~~~~~~~~~~"
+                        android:text="이런거 너무 어렵습니다."
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/userlist_user5_id"
@@ -484,72 +490,117 @@
 
     </ScrollView>
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/userlist_bottombar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         app:layout_constraintBottom_toBottomOf="parent">
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerInParent="true"
+            android:background="#C5C5C5"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_marginBottom="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/ic_home_24" />
-
-        <TextView
-            android:id="@+id/tv_friend"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/friend_constraintLayout_list"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="친구"
-            app:layout_constraintEnd_toEndOf="@+id/de_imageView3"
-            app:layout_constraintStart_toStartOf="@+id/de_imageView3"
-            app:layout_constraintTop_toBottomOf="@+id/de_imageView3" />
-
-        <ImageView
-            android:id="@+id/main_imageView5"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@drawable/ic_portrait_24" />
-
-        <TextView
-            android:id="@+id/de_main"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="홈"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/imageView4"
-            app:layout_constraintHorizontal_bias="0.531"
-            app:layout_constraintStart_toStartOf="@+id/imageView4" />
-
-        <ImageView
-            android:id="@+id/de_imageView3"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginTop="5dp"
+            android:clickable="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/ic_people_alt_24" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/de_myPage"
+            <ImageView
+                android:id="@+id/friend_list"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/ic_people_alt_24" />
+
+
+            <TextView
+                android:id="@+id/tv_friend_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="친구"
+                app:layout_constraintEnd_toEndOf="@+id/friend_list"
+                app:layout_constraintStart_toStartOf="@+id/friend_list"
+                app:layout_constraintTop_toBottomOf="@+id/friend_list" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/home_btn_list"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="마이페이지"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_main_list"
+                android:layout_width="27dp"
+                android:layout_height="30dp"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/ic_home_24" />
+
+
+            <TextView
+                android:id="@+id/de_main_list"
+                android:layout_width="15dp"
+                android:layout_height="21dp"
+                android:text="홈"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/iv_main_list"
+                app:layout_constraintHorizontal_bias="0.531"
+                app:layout_constraintStart_toStartOf="@+id/iv_main_list" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/navi_my_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="toMyPage"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/main_imageView5"
-            app:layout_constraintStart_toStartOf="@+id/main_imageView5" />
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_mypage_list"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:onClick="toMyPage"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/ic_portrait_24" />
+
+
+            <TextView
+                android:id="@+id/de_myPage_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="마이페이지"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/iv_mypage_list"
+                app:layout_constraintStart_toStartOf="@+id/iv_mypage_list" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
