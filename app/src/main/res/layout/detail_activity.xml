@@ -159,7 +159,7 @@
                 android:layout_marginTop="24dp"
                 android:background="@android:color/transparent"
                 android:src="@drawable/ic_link_24"
-                android:text="더보기"
+                android:text="@string/de_more"
                 android:textColor="@color/black"
                 android:textSize="15dp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -290,12 +290,19 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent">
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerInParent="true"
+            android:background="#C5C5C5"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/de_imageView4"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_marginBottom="20dp"
+            android:layout_marginTop="5dp"
             android:clickable="true"
             android:contentDescription="메인화면으로 이동"
             android:onClick="moveHome"
@@ -309,17 +316,18 @@
             android:id="@+id/de_friend"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="친구"
+            android:text="@string/nav_friend"
             app:layout_constraintEnd_toEndOf="@+id/de_imageView3"
             app:layout_constraintStart_toStartOf="@+id/de_imageView3"
             app:layout_constraintTop_toBottomOf="@+id/de_imageView3" />
 
         <ImageView
             android:id="@+id/de_imageView5"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="20dp"
+            android:layout_marginTop="5dp"
             android:clickable="true"
             android:contentDescription="마이페이지화면으로이동"
             android:onClick="moveMypage"
@@ -331,7 +339,7 @@
             android:id="@+id/de_main"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="홈"
+            android:text="@string/nav_home"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/de_imageView4"
             app:layout_constraintHorizontal_bias="0.531"
@@ -339,10 +347,11 @@
 
         <ImageView
             android:id="@+id/de_imageView3"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_marginStart="20dp"
             android:layout_marginBottom="20dp"
+            android:layout_marginTop="5dp"
             android:clickable="true"
             android:contentDescription="유저리스트화면으로 이동"
             android:onClick="moveUserList"
@@ -354,7 +363,7 @@
             android:id="@+id/de_myPage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="마이페이지"
+            android:text="@string/nav_mypage"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/de_imageView5"
             app:layout_constraintStart_toStartOf="@+id/de_imageView5" />

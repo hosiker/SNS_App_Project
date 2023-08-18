@@ -42,10 +42,10 @@ class SiginUpActivity : AppCompatActivity() {
             override fun afterTextChanged(s: Editable?) {
                 val text: TextView = findViewById(R.id.mbti_check_text)
                 if (!isMBTI(s.toString())) {
-                    text.text = "잘못된 MBTI입니다."
+                    text.text = getString(R.string.wrong_mbti)
                     mbtiCheck = false
                 } else {
-                    text.text = "올바른 MBTI입니다."
+                    text.text = getString(R.string.correct_mbti)
                     mbtiCheck = true
                 }
 
@@ -67,12 +67,12 @@ class SiginUpActivity : AppCompatActivity() {
 
                 when {
                     password.length < 8 || password.length > 15 -> {
-                        text.text = "비밀번호는 8자 이상 15자 이하여야합니다."
+                        text.text = getString(R.string.signin_pwd_condition)
                         pswCheck = false
                     }
 
                     else ->{
-                        text.text = "올바른 비밀번호입니다."
+                        text.text = getString(R.string.correct_pwd)
                         pswCheck = true
                     }
 
@@ -88,11 +88,11 @@ class SiginUpActivity : AppCompatActivity() {
         if (UserDB.userList.find { it.id == inputid } != null
             || inputid.isEmpty()) {
 
-            toast("불가능한 아이디입니다.")
+            toast(getString(R.string.impassble_id))
             idCheck = false
 
         } else {
-            toast("사용 가능한 아이디입니다.")
+            toast(getString(R.string.possible_id))
             idCheck = true
         }
     }
@@ -106,9 +106,9 @@ class SiginUpActivity : AppCompatActivity() {
         val inputstateM = stateM.text.toString()
 
         when {
-            idCheck == false -> toast("아이디 중복 체크를 해주세요!!")
+            idCheck == false -> toast(getString(R.string.please_double_check))
 
-            pswCheck == false -> toast("사용 가능한 비밀번호를 만들어주세요!!")
+            pswCheck == false -> toast(getString(R.string.please_double_check_pwd))
 
             checkEmpty(inputpsw) || checkEmpty(inputname) || checkEmpty(inputmbti)
             -> checkMessage(inputPsw = inputpsw, inputName = inputname, inputMBTI = inputmbti)
@@ -139,17 +139,20 @@ class SiginUpActivity : AppCompatActivity() {
 
         when {
 
-            checkEmpty(inputPsw) && checkEmpty(inputName) && checkEmpty(inputMBTI) -> toast("소개글을 제외한 공백을 확인해주세요")
+            checkEmpty(inputPsw) && checkEmpty(inputName) && checkEmpty(inputMBTI) -> toast(
+                getString(
+                    R.string.blank_check
+                ))
 
-            checkEmpty(inputPsw) && checkEmpty(inputName) -> toast("비밉번호와 이름을 입력해주세요")
+            checkEmpty(inputPsw) && checkEmpty(inputName) -> toast(getString(R.string.pwd_id_check))
 
-            checkEmpty(inputPsw) && checkEmpty(inputMBTI) -> toast("비밉번호와 mbti를 입력해주세요")
+            checkEmpty(inputPsw) && checkEmpty(inputMBTI) -> toast(getString(R.string.pwd_mbti_check))
 
-            checkEmpty(inputMBTI) && checkEmpty(inputName) -> toast("mbti와 이름을 입력해주세요")
+            checkEmpty(inputMBTI) && checkEmpty(inputName) -> toast(getString(R.string.mbti_name_check))
 
-            checkEmpty(inputPsw) -> toast("비밀번호를 확인해주세요")
+            checkEmpty(inputPsw) -> toast(getString(R.string.pwd_check))
 
-            checkEmpty(inputName) -> showDialog("이름", name)
+            checkEmpty(inputName) -> showDialog(getString(R.string.signin_name), name)
 
             checkEmpty(inputMBTI) || mbtiCheck == false -> showMBTIDialog("MBTI")
 
@@ -179,16 +182,16 @@ class SiginUpActivity : AppCompatActivity() {
         builder.setTitle(title)
         builder.setView(dialogView)
 
-        builder.setPositiveButton("확인") { dialog, _ ->
+        builder.setPositiveButton(getString(R.string.check)) { dialog, _ ->
             val inputText = input.text.toString()
 
             if (isMBTI(inputText)) mbti.setText(inputText)
-            else toast("올바른 mbti를 입력해주세요")
+            else toast(getString(R.string.correct_mbti))
 
             dialog.dismiss()
         }
 
-        builder.setNegativeButton("취소") { dialog, _ ->
+        builder.setNegativeButton(getString(R.string.cancle)) { dialog, _ ->
             dialog.dismiss()
         }
 
@@ -205,19 +208,19 @@ class SiginUpActivity : AppCompatActivity() {
         builder.setTitle(title)
         builder.setView(dialogView)
 
-        builder.setPositiveButton("확인") { dialog, _ ->
+        builder.setPositiveButton((R.string.check)) { dialog, _ ->
             val inputText = input.text.trim().toString()
 
             if (inputText.isNotEmpty()) {
                 id.setText(inputText)
                 dialog.dismiss()
             } else {
-                toast("${title}을 입력해주세요")
+                toast(getString(R.string.do_title, title))
             }
 
         }
 
-        builder.setNegativeButton("취소") { dialog, _ ->
+        builder.setNegativeButton((R.string.cancle)) { dialog, _ ->
             dialog.dismiss()
         }
 
