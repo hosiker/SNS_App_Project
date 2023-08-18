@@ -1,6 +1,6 @@
 package com.example.nbcamp_15ya_sns
 
-object userManager {
+object UserDB {
 
     var userList = mutableListOf<User>()
 

@@ -1,6 +1,6 @@
 package com.example.nbcamp_15ya_sns
 
-object friendManager {
+object FriendDB {
 
     val friendList = mutableListOf<Friend>()
 

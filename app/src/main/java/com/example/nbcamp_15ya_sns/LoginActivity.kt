@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import com.example.nbcamp_15ya_sns.userManager.userList
+import com.example.nbcamp_15ya_sns.UserDB.userList
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,7 +30,7 @@ class LoginActivity : AppCompatActivity() {
                 if (user != null) {
                     val intent = Intent(this, MainActivity::class.java)
 
-                    intent.putExtra("user",user)
+                    UserManager.user = user
 
                     Toast.makeText(this,"${user.name}님 반갑습니다", Toast.LENGTH_SHORT).show()
                     startActivity(intent)

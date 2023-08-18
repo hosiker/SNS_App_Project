@@ -13,7 +13,6 @@ import android.widget.ImageView
 
 class MainActivity : AppCompatActivity() {
 
-    val user by lazy { intent.getSerializableExtra("user") as User }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
@@ -23,12 +22,13 @@ class MainActivity : AppCompatActivity() {
         val tv_stateMsg = findViewById<TextView>(R.id.tv_stateMsg)
 
 
+        val user = UserManager.user
         // 1. 로그인 Activity로부터 유저 객체  받아오기
 
 
         // 2. 받아온 유저 객체의 정보로 text 설정
-        tv_userName.text = ("${user.name}")
-        tv_stateMsg.text = ("${user.stateM}")
+        tv_userName.text = ("${user?.name}")
+        tv_stateMsg.text = ("${user?.stateM}")
 
         val friend_constraintLayout = findViewById<ConstraintLayout>(R.id.friend_constraintLayout)
         friend_constraintLayout.setOnClickListener {
@@ -49,9 +49,7 @@ class MainActivity : AppCompatActivity() {
     fun toMyPage(view: View) {
 
         val intent = Intent(this, MyPageActivity::class.java)
-        val myimg = R.drawable.iu
-        intent.putExtra("user", user)
-        intent.putExtra("img",myimg)
+
         startActivity(intent)
 
 
