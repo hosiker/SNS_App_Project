@@ -48,7 +48,7 @@
         android:layout_height="37dp"
         android:layout_marginStart="35dp"
         android:ems="10"
-        android:hint="아이디를 입력해 주세요."
+        android:hint="@string/login_id_hint"
         android:inputType="text"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
