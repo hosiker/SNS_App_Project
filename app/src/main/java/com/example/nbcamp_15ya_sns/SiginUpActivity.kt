@@ -117,6 +117,8 @@ class SiginUpActivity : AppCompatActivity() {
 
             pswCheck == false -> toast(getString(R.string.please_double_check_pwd))
 
+            mbtiCheck == false -> showMBTIDialog("MBTI")
+
             checkEmpty(inputpsw) || checkEmpty(inputname) || checkEmpty(inputmbti)
             -> checkMessage(inputPsw = inputpsw, inputName = inputname, inputMBTI = inputmbti)
 
@@ -177,7 +179,6 @@ class SiginUpActivity : AppCompatActivity() {
 
             checkEmpty(inputName) -> showDialog(getString(R.string.signin_name), name)
 
-            checkEmpty(inputMBTI) || mbtiCheck == false -> showMBTIDialog("MBTI")
 
         }
 

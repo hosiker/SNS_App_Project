@@ -40,7 +40,6 @@ class MyPageActivity : AppCompatActivity() {
 
         val homeBtn = findViewById<ConstraintLayout>(R.id.home_btn_my)
         val friendBtn = findViewById<ConstraintLayout>(R.id.friend_constraintLayout_my)
-        val backBtn = findViewById<ImageView>(R.id.my_backbutton)
 
         stateM.setOnClickListener{
             Dialog(getString(R.string.signin_stateM),stateM)
@@ -56,10 +55,6 @@ class MyPageActivity : AppCompatActivity() {
             val gofriend = Intent(this, UserListActivity::class.java)
             gofriend.putExtra("user", userME)
             startActivity(gofriend)
-        }
-
-        backBtn.setOnClickListener {
-            finish()
         }
 
     }
