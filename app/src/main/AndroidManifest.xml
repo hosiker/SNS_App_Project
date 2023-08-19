@@ -13,25 +13,25 @@
         android:theme="@style/Theme.NBcamp_15ya_SNS"
         tools:targetApi="31">
         <activity
-            android:name=".activity.DetailActivity"
+            android:name=".DetailActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.UserListActivity"
+            android:name=".UserListActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.MyPageActivity"
+            android:name=".MyPageActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.MainActivity"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.LoginActivity"
+            android:name=".LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.SiginUpActivity"
+            android:name=".SiginUpActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.StartActivity"
+            android:name=".StartActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

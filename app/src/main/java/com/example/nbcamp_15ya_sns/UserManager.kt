@@ -1,6 +1,4 @@
-package com.example.nbcamp_15ya_sns.user
-
-import com.example.nbcamp_15ya_sns.R
+package com.example.nbcamp_15ya_sns
 
 object UserManager {
 

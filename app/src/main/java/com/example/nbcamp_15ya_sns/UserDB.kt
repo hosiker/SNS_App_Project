@@ -1,4 +1,4 @@
-package com.example.nbcamp_15ya_sns.user
+package com.example.nbcamp_15ya_sns
 
 object UserDB {
 

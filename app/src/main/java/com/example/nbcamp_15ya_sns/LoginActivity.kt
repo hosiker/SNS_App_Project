@@ -1,4 +1,4 @@
-package com.example.nbcamp_15ya_sns.activity
+package com.example.nbcamp_15ya_sns
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,10 +6,7 @@ import android.os.Bundle
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import com.example.nbcamp_15ya_sns.R
-import com.example.nbcamp_15ya_sns.user.User
-import com.example.nbcamp_15ya_sns.user.UserDB.userList
-import com.example.nbcamp_15ya_sns.user.UserManager
+import com.example.nbcamp_15ya_sns.UserDB.userList
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

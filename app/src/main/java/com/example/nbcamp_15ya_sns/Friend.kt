@@ -1,4 +1,4 @@
-package com.example.nbcamp_15ya_sns.firend
+package com.example.nbcamp_15ya_sns
 
 import java.io.Serializable
 

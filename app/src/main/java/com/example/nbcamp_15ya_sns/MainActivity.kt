@@ -1,13 +1,14 @@
-package com.example.nbcamp_15ya_sns.activity
+package com.example.nbcamp_15ya_sns
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
-import com.example.nbcamp_15ya_sns.R
-import com.example.nbcamp_15ya_sns.user.UserManager
+import android.widget.ImageView
 
 
 class MainActivity : AppCompatActivity() {
