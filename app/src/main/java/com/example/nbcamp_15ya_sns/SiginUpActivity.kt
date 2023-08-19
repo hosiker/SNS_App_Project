@@ -1,4 +1,4 @@
-package com.example.nbcamp_15ya_sns.activity
+package com.example.nbcamp_15ya_sns
 
 import android.app.AlertDialog
 import android.content.Intent
@@ -11,9 +11,6 @@ import android.view.View
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import com.example.nbcamp_15ya_sns.R
-import com.example.nbcamp_15ya_sns.user.User
-import com.example.nbcamp_15ya_sns.user.UserDB
 
 
 class SiginUpActivity : AppCompatActivity() {
@@ -162,7 +159,7 @@ class SiginUpActivity : AppCompatActivity() {
     }
 
 
-    private fun checkMessage(inputPsw: String, inputName: String, inputMBTI: String) {
+    fun checkMessage(inputPsw: String, inputName: String, inputMBTI: String) {
 
         when {
 
@@ -200,7 +197,7 @@ class SiginUpActivity : AppCompatActivity() {
     }
 
 
-    private fun showMBTIDialog(title: String) {
+    fun showMBTIDialog(title: String) {
         val builder: AlertDialog.Builder = AlertDialog.Builder(this)
         val inflater = layoutInflater
         val dialogView = inflater.inflate(R.layout.custom_mbti_dialog, null)
@@ -226,7 +223,7 @@ class SiginUpActivity : AppCompatActivity() {
         dialog.show()
     }
 
-    private fun showDialog(title: String, id: EditText) {
+    fun showDialog(title: String, id: EditText) {
         val builder: AlertDialog.Builder = AlertDialog.Builder(this)
         val inflater = layoutInflater
         val dialogView = inflater.inflate(R.layout.custom_text_dialog, null)
