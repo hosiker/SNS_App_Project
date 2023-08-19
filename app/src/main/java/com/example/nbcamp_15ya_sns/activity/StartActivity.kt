@@ -1,9 +1,10 @@
-package com.example.nbcamp_15ya_sns
+package com.example.nbcamp_15ya_sns.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import com.example.nbcamp_15ya_sns.R
 
 class StartActivity : AppCompatActivity() {
 
