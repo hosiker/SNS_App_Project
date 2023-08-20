@@ -4,9 +4,13 @@ Twitter app을 오마주한 가상 SNS앱 만들기
 
 
 
-[프로젝트 노션 페이지]: https://www.notion.so/SiboYa-SNS-App-2933ade80db94ad29a8ff585baf3dfc4
-[앱 시연 영상 Youtube]: https://www.youtube.com/watch?v=4Z_8y-jc7_w
-[프로젝트 PPT 자료]: https://docs.google.com/presentation/d/1sDtRiLPYBLzDKV8s3WHsgptgq1wrW2QRnm9elVO5qkM/edit#slide=id.p
+[프로젝트 노션 페이지](https://www.notion.so/SiboYa-SNS-App-2933ade80db94ad29a8ff585baf3dfc4 )
+
+[앱 시연 연상 Youtube](https://www.youtube.com/watch?v=4Z_8y-jc7_w)
+
+[프로젝트 PPT 자료](https://docs.google.com/presentation/d/1sDtRiLPYBLzDKV8s3WHsgptgq1wrW2QRnm9elVO5qkM/edit#slide=id.p)
+
+
 
 ![Untitled](https://github.com/hosiker/SNS_App_Project/assets/139109345/b5cc035c-b4e5-4418-9108-28ed85e371cb)
 
