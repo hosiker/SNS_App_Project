@@ -1,14 +1,14 @@
-package com.example.nbcamp_15ya_sns
+package com.example.nbcamp_15ya_sns.activity
 
 import android.app.AlertDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
-import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
+import com.example.nbcamp_15ya_sns.R
+import com.example.nbcamp_15ya_sns.user.UserManager
 import de.hdodenhof.circleimageview.CircleImageView
 
 

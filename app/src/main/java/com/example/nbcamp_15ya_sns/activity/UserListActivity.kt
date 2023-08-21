@@ -1,4 +1,4 @@
-package com.example.nbcamp_15ya_sns
+package com.example.nbcamp_15ya_sns.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,6 +6,9 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
 import androidx.constraintlayout.widget.ConstraintLayout
+import com.example.nbcamp_15ya_sns.R
+import com.example.nbcamp_15ya_sns.friend.Friend
+import com.example.nbcamp_15ya_sns.friend.FriendDB
 
 class UserListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,11 +21,21 @@ class UserListActivity : AppCompatActivity() {
         val friendListJisung = findViewById<ConstraintLayout>(R.id.friend_list4)
         val friendListJaeyong = findViewById<ConstraintLayout>(R.id.friend_list5)
 
-        toss(view = friendListHosick, friend = "hosick", friendInfo = FriendDB.friendList[0],"img1",R.drawable.hosick)
-        toss(view = friendListGyujin, friend = "gyujin", friendInfo = FriendDB.friendList[1],"img2",R.drawable.gyujin)
-        toss(view = friendListSeungyoon, friend = "seingyoon", friendInfo = FriendDB.friendList[2],"img3",R.drawable.seungyoon)
-        toss(view = friendListJisung, friend = "jisung", friendInfo = FriendDB.friendList[3],"img4",R.drawable.jisung)
-        toss(view = friendListJaeyong, friend = "jaeyoung", friendInfo = FriendDB.friendList[4],"img5",R.drawable.jaeyong)
+        toss(view = friendListHosick, friend = "hosick", friendInfo = FriendDB.friendList[0],"img1",
+            R.drawable.hosick
+        )
+        toss(view = friendListGyujin, friend = "gyujin", friendInfo = FriendDB.friendList[1],"img2",
+            R.drawable.gyujin
+        )
+        toss(view = friendListSeungyoon, friend = "seingyoon", friendInfo = FriendDB.friendList[2],"img3",
+            R.drawable.seungyoon
+        )
+        toss(view = friendListJisung, friend = "jisung", friendInfo = FriendDB.friendList[3],"img4",
+            R.drawable.jisung
+        )
+        toss(view = friendListJaeyong, friend = "jaeyoung", friendInfo = FriendDB.friendList[4],"img5",
+            R.drawable.jaeyong
+        )
 
         val homeBtn = findViewById<ConstraintLayout>(R.id.home_btn_list)
         val backBtn = findViewById<ImageView>(R.id.userlist_backButton)
@@ -36,13 +49,13 @@ class UserListActivity : AppCompatActivity() {
             finish()
         }
         myBtn.setOnClickListener{
-            val toMy = Intent(this,MyPageActivity::class.java)
+            val toMy = Intent(this, MyPageActivity::class.java)
             startActivity(toMy)
         }
 
 
     }
-    fun toss(view:View,friend:String,friendInfo:Friend,imgN:String,myimg:Int){
+    fun toss(view:View, friend:String, friendInfo: Friend, imgN:String, myimg:Int){
 
         view.setOnClickListener{
 
